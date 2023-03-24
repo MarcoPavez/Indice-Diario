@@ -25,4 +25,4 @@ Los indicadores disponibles para su consulta, según el sitio web www.mindicador
 
 ## Créditos 
 
-@lee_om, desarrollador del sitio web www.mindicador.cl
+@lee_om (en Twitter), desarrollador del sitio web www.mindicador.cl
