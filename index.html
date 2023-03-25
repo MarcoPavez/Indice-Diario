@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
-    <title>Dashboard Indicadores Economicos</title>
+    <title>Indice Diario</title>
 </head>
 <body>
     <header>
         <nav>
             <div class="Nav__logo">
                 <h3>
-                    Indicadores Economicos
+                    Indice Diario
                 </h3>
             </div>
             <div class="Nav__links">
@@ -23,7 +23,7 @@
         </nav>
     </header>
     <main>
-        <h1>Dashboard-indicadores-economicos</h1>
+        <h1>Indice Diario</h1>
         <h2>Bienvenido de Vuelta: {Nombre}</h2>
         <div class="Main__Descripcion">
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis, incidunt! Accusantium ipsa aspernatur pariatur hic! Molestias alias saepe nobis dignissimos facilis, atque id animi, accusantium inventore autem voluptatibus velit officiis.</p>
@@ -36,17 +36,27 @@
             <div class="section__buscador">
                 <label>Indicadores Economicos</label>
                 <select>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
+                    <option>---Ingrese Indicador Economico---</option>
+                    <option value="UF">Unidad de Fomento (UF)</option>
+                    <option value="IVP">Índice de Valor Promedio (IVP)</option>
+                    <option value="Dolar">Dólar</option>
+                    <option value="Dintercambio">Dólar de intercambio</option>
+                    <option value="Euro">Euro</option>
+                    <option value="IPC">Índice de Precio al Consumidor (IPC)</option>
+                    <option value="UTM">Unidad Tributaria Mensual (UTM)</option>
+                    <option value="IMACEC">Índice Mensual de Actividad Económico (IMACEC)</option>
+                    <option value="TPM">Tasa de Política Monetaria (TPM)</option>
+                    <option value="Cobre">Libra de Cobre</option>
+                    <option value="TasaDesempleo">Tasa de Desempleo</option>
+                    <option value="Bitcoin">Bitcoin</option>
                 </select>
             </div>
         </section>
         <table style="border-collapse: collapse;">
-            <thead >
+            <thead>
                 <tr>
-                    <th class="thead__th" >Indicador Economico</th>
-                    <th class="thead__th">Informacion</th>
+                    <th class="thead__th" scope="row" >Indicador Economico</th>
+                    <th class="thead__th"scope="col" >Informacion</th>
                 </tr>
             </thead>
             <tbody>
