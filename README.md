@@ -23,6 +23,10 @@ Los indicadores disponibles para su consulta, según el sitio web www.mindicador
 - **Tasa de Desempleo**: Valores desde 2009 hasta hoy.
 - **Bitcoin**: Valores desde 2009 hasta hoy.
 
+## Guía de estilos y mock-up
+
+La guía de estilos y los distintos bosquejos están disponibles en [Figma Índice Diario](https://www.figma.com/file/sWJNi9pD6EHVHBTAbjNBsH/Gu%C3%ADa-de-estilos-y-mockups-%C3%8Dndice-Diario?node-id=0%3A1&t=9pHTQsqutB3gbbyh-1)
+
 ## Créditos 
 
 @lee_om (en Twitter), desarrollador del sitio web www.mindicador.cl
