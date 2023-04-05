@@ -1,5 +1,6 @@
 import React from 'react'
-import "../img/comprobado.png"
+import check from "../img/comprobado.png"
+import "../styles/planes.css"
 
 function Planes() {
     return (
@@ -21,16 +22,16 @@ function Planes() {
                         <h2 class="cards-titulo">Básico</h2>
                         <p class="cards-precio"> Después del período de gratuidad, el precio mensual del plan asciende a $2.500.</p>
                         <hr/>
-                        <ul style="list-style-image:url( assets/comprobado.png);">
+                        <ul>
                             <li>Consulta valores de los indicadores de hasta el último año.</li>
                             <li>Realiza hasta 3 consultas diarias.</li>
                             <li>Las series temporales se restringen hasta un año en el tiempo.</li>
                         </ul>
-                
+        
                         <button>Empezar</button>
                         <p class="cards-terminos">Se aplican  <strong>Términos y Condiciones</strong>. El mes gratis no está disponible para aquellos usuarios que ya han probado alguno de nuestros planes.</p>
                     </div>
-                </div>
+                </div>  
 
                 <div class="cards-planes">
                     <div class="cards-contenido">
@@ -38,7 +39,7 @@ function Planes() {
                         <h2 class="cards-titulo">Intermedio</h2>
                         <p class="cards-precio"> Después del período de gratuidad, el precio mensual del plan asciende a $3.500.</p>
                         <hr/>
-                        <ul style="list-style-image:url( assets/comprobado.png);">
+                        <ul>
                             <li>Consulta valores de los indicadores sin límite temporal.</li>
                             <li>Realiza hasta 30 consultas diarias.</li>
                             <li>Las series temporales se restringen hasta un año en el tiempo.</li>
@@ -54,7 +55,7 @@ function Planes() {
                         <h2 class="cards-titulo">Avanzado</h2>
                         <p class="cards-precio"> Después del período de gratuidad, el precio mensual del plan asciende a $5.000.</p>
                         <hr/>
-                        <ul style="list-style-image:url( assets/comprobado.png);">
+                        <ul>
                         <li>Consulta valores de los indicadores sin límite temporal.</li>
                         <li>Realiza consultas sin límites diarios.</li>
                         <li>Las series temporales no tienen restricción temporal.</li>
