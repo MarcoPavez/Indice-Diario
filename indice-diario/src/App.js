@@ -1,10 +1,10 @@
 import React from 'react'
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"
 import Navbar from './components/Navbar'
-import Footer from './components/Footer'
+/*import Footer from './components/Footer'*/
 import Inicio from "./pages/Inicio"
-/* import Glosario from "./pages/Glosario"
-import Planes from "./pages/Planes" */
+/* import Glosario from "./pages/Glosario"*/
+import Planes from "./pages/Planes" 
 
 
 const Layout = () => {
@@ -12,7 +12,7 @@ const Layout = () => {
     <>
     <Navbar/>
     <Outlet/>
-    <Footer/>
+
     </>
   );
 };
@@ -29,11 +29,11 @@ const router = createBrowserRouter([
       /* {
         path:"/glosario",
         element:<Glosario/>
-      },
+      },*/
       {
         path:"/planes",
         element:<Planes/>
-      } */
+      } 
     ]
   }
 ])
