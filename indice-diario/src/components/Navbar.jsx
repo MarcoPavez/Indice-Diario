@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/styles.css";
+import "../styles/navbar.css";
 import indicadores from "../img/indicadores.jpg";
 
 function Navbar() {
@@ -26,26 +26,7 @@ function Navbar() {
         </ul>
       </div>
 
-      <div class="navInferior">
-        <h2>
-          Proveemos la información
-          <br />
-          que necesitas
-        </h2>
-      </div>
-
-      <p id="navInferiorParrafo">
-        Desplegamos los valores diarios e históricos de distintos{" "}
-        <strong>índices del mercado</strong>. Comienza a explorar y obtén
-        información valiosa sobre el panorama económico nacional.
-      </p>
-
-      <div class="navImagen">
-        <img
-          src={indicadores}
-          alt="Imagen provisoria. Gráfico que visualiza las alzas y caídas de un indicador."
-        />
-      </div>
+  
     </nav>
   );
 }
