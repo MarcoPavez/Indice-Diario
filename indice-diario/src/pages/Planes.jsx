@@ -1,5 +1,4 @@
 import React from 'react'
-import check from "../img/comprobado.png"
 import "../styles/planes.css"
 
 function Planes() {
@@ -28,7 +27,7 @@ function Planes() {
                             <li>Las series temporales se restringen hasta un año en el tiempo.</li>
                         </ul>
         
-                        <button>Empezar</button>
+                        <button class="botonCartas">Empezar</button>
                         <p class="cards-terminos">Se aplican  <strong>Términos y Condiciones</strong>. El mes gratis no está disponible para aquellos usuarios que ya han probado alguno de nuestros planes.</p>
                     </div>
                 </div>  
@@ -44,7 +43,7 @@ function Planes() {
                             <li>Realiza hasta 30 consultas diarias.</li>
                             <li>Las series temporales se restringen hasta un año en el tiempo.</li>
                         </ul>
-                        <button>Empezar</button>
+                        <button class="botonCartas">Empezar</button>
                         <p class="cards-terminos">Se aplican  <strong>Términos y Condiciones</strong>. El mes gratis no está disponible para aquellos usuarios que ya han probado alguno de nuestros planes.</p>
         
                     </div>
@@ -60,7 +59,7 @@ function Planes() {
                         <li>Realiza consultas sin límites diarios.</li>
                         <li>Las series temporales no tienen restricción temporal.</li>
                         </ul>
-                        <button>Empezar</button>
+                        <button class="botonCartas">Empezar</button>
                         <p class="cards-terminos">Se aplican  <strong>Términos y Condiciones</strong>. El mes gratis no está disponible para aquellos usuarios que ya han probado alguno de nuestros planes.</p>
                     </div>
                 </div>
