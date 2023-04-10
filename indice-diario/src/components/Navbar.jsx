@@ -1,6 +1,5 @@
 import React from "react";
-import "../styles/styles.css";
-import indicadores from "../img/indicadores.jpg";
+import "../styles/navbar.css";
 
 function Navbar() {
   return (
