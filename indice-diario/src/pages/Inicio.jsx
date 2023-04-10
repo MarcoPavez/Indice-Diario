@@ -1,66 +1,128 @@
-import React from "react";
-import "../styles/styles.css"
-import indicadores from "../img/indicadores.jpg"
+import React, { useState } from "react";
+import "../styles/inicio.css";
+import indicadores from "../img/indicadores.jpg";
 
 const Inicio = () => {
+  const [mostrarNacionales, setMostrarNacionales] = useState(true);
+
+  function handleMostrarNacionales() {
+    setMostrarNacionales(true);
+  }
+
+  function handleMostrarInternacionales() {
+    setMostrarNacionales(false);
+  }
+
   return (
     <div class="inicio">
-      <section>
+      <section id="inicioSuperior">
+        <h2>
+          Proveemos la información
+          <br />
+          que necesitas
+        </h2>
+
+        <p id="navInferiorParrafo">
+          Desplegamos los valores diarios e históricos de distintos{" "}
+          <strong>índices del mercado</strong>. Comienza a explorar y obtén
+          información valiosa sobre el panorama económico nacional.
+        </p>
+
+        <div class="navImagen">
+          <picture>
+            <img
+              src={indicadores}
+              alt="Imagen provisoria. Gráfico que visualiza las alzas y caídas de un indicador."
+            />
+          </picture>
+        </div>
+      </section>
+
+      <section id="inicioInferior">
         <h2>
           Facilitamos tus decisiones
           <br />
           Actualizamos tus conocimientos
         </h2>
 
-        <div class="descripcion__principal">
-          <p>
-            Mantenente actualizado con las últimas tendencias del mercado
-            <br />y toma decisiones informadas sobre tus inversiones.
-            <br /> Tanto si eres un analista financiero, investigador o tienes
-            interés
-            <br />
-            en realizar un seguimiento de la economía nacional, nuestros
-            <br />
-            servicios te proporcionan los datos que necesitas a través de una
-            <br />
-            interfaz fácil de utilizar.
-          </p>
-          <div class="descripcion__principal__img">
-            <picture>
-              <img src={indicadores} alt="" />
-            </picture>
-          </div>
+        <p>
+          Mantenente actualizado con las últimas{" "}
+          <strong>tendencias del mercado</strong> y toma decisiones informadas
+          sobre tus inversiones. Nuestros servicios te proporcionan los datos
+          que necesitas a través de una interfaz fácil de utilizar.
+        </p>
+        <div class="descripcionPrincipalImagen">
+          <picture>
+            <img src={indicadores} alt="" />
+          </picture>
         </div>
       </section>
-      <section>
+
+      <section id="panelInformacion">
         <h2>Consulta tu índice diario</h2>
-
-        <div class="section__buscador">
-          <button>Nacionales</button>
-          <button>Internacionales</button>
-
-          <div class="section__buscador__nacionales">
-            <div value="UF">Unidad de Fomento (UF)</div>
-            <div value="IPC">Índice de Precio al Consumidor (IPC)</div>
-            <div value="UTM">Unidad Tributaria Mensual (UTM)</div>
-            <div value="IVP">Índice de Valor Promedio (IVP)</div>
-            <div value="IMACEC">
-              Índice Mensual de Actividad Económico (IMACEC)
-            </div>
-            <div value="TPM">Tasa de Política Monetaria (TPM)</div>
-            <div value="TasaDesempleo">Tasa de Desempleo</div>
-            <div value="Cobre">Libra de Cobre</div>
-          </div>
-          <div class="section__buscador__internacionales">
-            <div value="Dolar">Dólar</div>
-            <div value="DolarIntercambio">Dólar de intercambio</div>
-            <div value="Euro">Euro</div>
-            <div value="Bitcoin">Bitcoin</div>
-          </div>
+        <div id="panelInformacionBotones">
+          <button
+            class="panelInformacionBoton"
+            onClick={handleMostrarNacionales}
+          >
+            Nacionales
+          </button>
+          <button
+            class="panelInformacionBoton"
+            onClick={handleMostrarInternacionales}
+          >
+            Internacionales
+          </button>
         </div>
+        {mostrarNacionales === true && (
+          <div id="botonesNacionales">
+            <button class="botonNacional" value="UF">
+              Unidad de Fomento (UF)
+            </button>
+            <button class="botonNacional" value="IPC">
+              Índice de Precio al Consumidor (IPC) 
+            </button>
+            <button class="botonNacional" value="UTM">
+              Unidad Tributaria<br/>Mensual (UTM)
+            </button>
+            <button class="botonNacional" value="IVP">
+              Índice de Valor<br/>Promedio (IVP)
+            </button>
+            <button class="botonNacional" value="IMACEC">
+              Índice Mensual de Actividad Económica (IMACEC)
+            </button>
+            <button class="botonNacional" value="TPM">
+              Tasa de Política<br/>Monetaria (TPM)
+            </button>
+            <button class="botonNacional" value="TasaDesempleo">
+              Tasa de Desempleo
+            </button>
+            <button class="botonNacional" value="Cobre">
+              Libra de Cobre
+            </button>
+          </div>
+        )}
+        
+
+        {mostrarNacionales === false && (
+        <div id="botonesInternacionales">
+          <button class="botonInternacional" value="Dolar">
+            Dólar
+          </button>
+          <button class="botonInternacional" value="DolarIntercambio">
+            Dólar de intercambio
+          </button>
+          <button class="botonInternacional" value="Euro">
+            Euro
+          </button>
+          <button class="botonInternacional" value="Bitcoin">
+            Bitcoin
+          </button>
+        </div>
+        )}
       </section>
     </div>
   );
-}
+};
 
 export default Inicio;
