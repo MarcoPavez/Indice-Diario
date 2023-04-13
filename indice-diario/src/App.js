@@ -5,6 +5,8 @@ import Footer from './components/Footer'
 import Inicio from "./pages/Inicio"
 /* import Glosario from "./pages/Glosario"*/
 import Planes from "./pages/Planes"
+import Registro from './pages/Registro'
+import Ingreso from './pages/Ingreso'
 
 
 const Layout = () => {
@@ -25,6 +27,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Inicio />
+      },
+      {
+        path: "/registro",
+        element: <Registro />
+      },
+      {
+        path: "/ingreso",
+        element: <Ingreso />
       },
       /* {
         path:"/glosario",
