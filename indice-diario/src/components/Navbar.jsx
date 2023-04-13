@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/navbar.css";
-import indicadores from "../img/indicadores.jpg";
 
 function Navbar() {
   return (

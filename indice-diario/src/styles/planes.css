@@ -7,9 +7,6 @@
     --main-color-text2: #FFFFFF;
 }
 
-body{
-    font-family:'Roboto';
-}
 
 h1{
     color: var(--main-color-text2);
@@ -91,14 +88,10 @@ hr{
     border: 1px solid black;
     margin: 50px 0px;
 }
-ul{
-    padding-bottom: 38px;
-}
-li{
-    padding-bottom:20px ;
-}
+
+
 /*Boton*/
-button{
+.botonCartas{
     background-color: var(--main-color);
     color: var(--main-color-text2);
     border-radius: 30px;
