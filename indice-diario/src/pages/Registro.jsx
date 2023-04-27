@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/registro.css";
 
 const Registro = () => {
+  const [crearUsuario, setCrearUsuario] = useState({
+    nombre: "",
+    apellido: "",
+    nombreUsuario: "",
+    correo: "",
+    contrasena: "",
+    confirmarContrasena: "",
+    genero: "",
+    fechaNacimiento: "",
+    pais: "",
+    inputTerminosCondiciones: false,
+  });
+
   return (
     <form action="index.html" method="get" id="formRegistro">
       <h2>Regístrate</h2>
@@ -98,7 +111,12 @@ const Registro = () => {
             <label for="fechaNacimiento">Fecha de nacimiento</label>
             <br></br>
 
-            <input type="date" id="fechaNacimiento" required />
+            <input
+              type="date"
+              name="fechaNacimiento"
+              id="fechaNacimiento"
+              required
+            />
           </div>
           <div>
             <label for="seleccionarPais">País de residencia</label>
@@ -121,6 +139,7 @@ const Registro = () => {
       <label id="labelTerminosCondiciones">
         <input
           type="checkbox"
+          name="inputTerminosCondiciones"
           id="inputTerminosCondiciones"
           value="acepta"
           required
