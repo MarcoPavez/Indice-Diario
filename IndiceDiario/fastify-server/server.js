@@ -5,8 +5,10 @@ fastify.get('/', async (request, reply) => {
   return { hello: 'world' }
 })
 
-fastify.post('/registro', require('./src/registro'));
-fastify.post('/ingreso', require('./src/login'));
+fastify.post('/registro', require('./src/registroServer'));
+fastify.post('/ingreso', require('./src/ingresoServer'));
+fastify.post('/verificarToken', require('./src/verificarToken'));
+
 
 const start = async () => {
   try {
