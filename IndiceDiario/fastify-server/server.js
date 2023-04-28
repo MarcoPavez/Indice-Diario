@@ -7,7 +7,7 @@ fastify.get('/', async (request, reply) => {
 
 fastify.post('/registro', require('./src/registroServer'));
 fastify.post('/ingreso', require('./src/ingresoServer'));
-fastify.post('/verificarToken', require('./src/verificarToken'));
+fastify.get('/usuario/verificarToken', require('./src/verificarToken')); 
 
 
 const start = async () => {
