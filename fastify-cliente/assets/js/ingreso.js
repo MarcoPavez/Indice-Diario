@@ -36,7 +36,7 @@ formulario.addEventListener("submit", async (submitEvent) => {
         
         const usuarioLogin = objetoJSON.user;
         localStorage.setItem('usuario', JSON.stringify(usuarioLogin));
-        window.location = '/inicio.html';
+        window.location = 'http://localhost:8080/perfil';
     } catch (error) {
         //gestionar errores
         console.error(error.code);
