@@ -131,8 +131,7 @@ strong{
   margin-block: 3vw;
 }
 
-.botonNacional,
-.botonInternacional {
+.botonIndice {
   height: 8vw;
   margin-top: 2vw;
   box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.15);
@@ -148,8 +147,7 @@ strong{
     font-weight: 400;
   }
 
-  .botonNacional,
-  .botonInternacional {
+  .botonIndice {
     height: 17vw;
     margin-top: 0.5vw;
     font-size: 2.5vw;
@@ -162,8 +160,7 @@ strong{
     font-weight: 400;
   }
 
-  .botonNacional,
-  .botonInternacional {
+  .botonIndice {
     height: 11.5vw;
     margin-top: 0.5vw;
     font-size: 1.8vw;
@@ -201,13 +198,8 @@ strong{
     font-weight: 500;
   }
 
-  .botonNacional {
+  .botonIndice {
     font-size: 1vw;
-    height: 4vw;
-  }
-  
-  .botonInternacional{
-    font-size: 1.3vw;
     height: 4vw;
   }
 }
