@@ -1,24 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
   margin: 0;
 }
-/* MOBILE FIRST */
 
-#inicioSuperior{
+/* Informacion introductoria */
+
+#informacion-introductoria {
   background-color: #e2e4ea;
-  box-shadow: 0px 0px 15px 5px #b7bccd;
-  padding-bottom:1vw;
+  box-shadow: inset 0 0px 10px -10px #b7bccd;
+  padding-bottom: 1vw;
   /* Debido a navbar position:fixed, es necesario darle margin-top a #inicioSuperior */
   margin-top: 7vw;
-  padding-top: 2vw; 
+  padding-top: 2vw;
 }
 
-#inicioSuperior h2 {
+.titulos-incentivo {
   color: var(--colorPrincipal);
   font-size: 4.5vw;
   text-align: center;
@@ -26,7 +27,7 @@ body {
   margin-block: 2vw;
 }
 
-#inicioSuperiorParrafoPrimero{
+.parrafos-informativos {
   box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.15);
   border-radius: 1vw;
 
@@ -34,83 +35,50 @@ body {
   margin-inline: 4.5vw;
   margin-block: 4vw;
 
-  font-size: 3vw;
-  font-weight: 800;
-  text-align: center;
+  font-size: 2.6vw;
+  font-weight: 300;
+
+  text-align: justify;
 }
 
-#inicioSuperiorParrafoPrimero span{
-  font-size: 2.25vw;
-  font-weight: 800;
+#informacion-introductoria-iconos .parrafos-informativos {
+  width: 50%;
+}
+
+strong {
   color: var(--colorTriadicoPrimero);
+  font-weight: 600;
 }
 
-#inicioSuperiorParrafoSegundo{
-  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.15);
-  border-radius: 1vw;
+#informacion-introductoria-iconos {
+  display: flex;
+}
+
+picture {
+  width: 50%;
+}
+
+picture img {
   width: 45%;
-  padding: 2vw;
-  margin-inline: 4.5vw;
-  margin-block: 4vw;
-
-  font-size: 2.5vw;
-  font-weight: 300;
-  text-align: center;
-
-  text-align: justify;
-  text-justify: inter-word;
 }
-
-#inicioInferior p {
-  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.15);
-  border-radius: 1vw;
-
-  padding: 2vw;
-  
-  margin: 0;
-  margin-inline: 4.5vw;
-
-  font-size: 2.5vw;
-  font-weight: 300;
-  text-align: center;
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-
-strong{
-  color: var(--colorTriadicoPrimero);
-  font-weight: 700;
-}
-
-
-
-#inicioInferior h2 {
-  color: var(--colorPrincipal);
-  font-size: 3.5vw;
-  
-  text-align: center;
-  padding-top: 6vw;
-  padding-bottom: 4vw;
-  margin: 0;
-}
-
 
 /* SECCION PANEL DE INFORMACION */
 
-#panelInformacion h4 {
+.titulos-de-consultas {
+  font-size: 4vw;
   font-weight: 800;
   text-align: center;
   margin-block: 5vw;
 }
 
-#panelInformacionBotones {
+#panel-botones {
   display: flex;
   justify-content: space-evenly;
 }
 
-#indicesNacionales,
-#indicesInternacionales {
+#indices-nacionales,
+#indices-internacionales,
+#consultar-indice {
   background-color: var(--colorTriadicoPrimero);
   width: 30vw;
   box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.15);
@@ -122,8 +90,8 @@ strong{
   font-weight: 500;
 }
 
-#botonesNacionales,
-#botonesInternacionales {
+#botones-nacionales,
+#botones-internacionales {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
   grid-gap: 1vw;
@@ -131,7 +99,7 @@ strong{
   margin-block: 3vw;
 }
 
-.botonIndice {
+.boton-indice {
   height: 8vw;
   margin-top: 2vw;
   box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.15);
@@ -141,13 +109,19 @@ strong{
   font-weight: 300;
 }
 
+#despliegue-respuesta{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media (max-width: 380px) {
-  .panelInformacionBoton {
+  #panel-botones {
     font-size: 3vw;
     font-weight: 400;
   }
 
-  .botonIndice {
+  .boton-indice {
     height: 17vw;
     margin-top: 0.5vw;
     font-size: 2.5vw;
@@ -155,54 +129,30 @@ strong{
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-  .panelInformacionBoton {
+  .panel-botones {
     font-size: 0.8rem;
     font-weight: 400;
   }
 
-  .botonIndice {
+  .boton-indice {
     height: 11.5vw;
     margin-top: 0.5vw;
     font-size: 1.8vw;
   }
 }
 
-@media (min-width: 769px) {
-  #inicioSuperior h2 {
-    margin-top: 13vw;
-    font-size: 3vw;
+@media (min-width: 769px) and (max-width: 1024px) {
+  #informacion-introductoria h2 {
+    margin-top: 5vw;
     padding-bottom: 0;
   }
 
-  #inicioInferior h2 {
-    font-size: 3vw;
-    padding-bottom: 0;
-  }
-
-  #navInferiorParrafo,
-  #inicioInferior p {
-    font-size: 1.4vw;
-  }
-
-  #panelInformacion h2 {
-    font-size: 3vw;
-  }
-
-  #panelInformacionBotones {
+  #panel-botones {
     margin-bottom: 2vw;
   }
 
-  .panelInformacionBoton {
-    width: 15vw;
-    font-size: 1.2vw;
-    font-weight: 500;
-  }
-
-  .botonIndice {
+  .boton-indice {
     font-size: 1vw;
     height: 4vw;
   }
 }
-
-
-

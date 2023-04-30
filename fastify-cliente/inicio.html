@@ -54,117 +54,123 @@
     </ol>
   </section>
 
-  <main class="inicio">
-    <section id="inicioSuperior">
-      <h2>
+  <main>
+    <section id="informacion-introductoria">
+
+      <h3 class="titulos-incentivo">
         Proveemos la información
         <br />
         que necesitas
-      </h2>
+      </h3>
 
-      <p id="inicioSuperiorParrafoPrimero">
+      <p class="parrafos-informativos">
         Consulta los principales indicadores del mercado <br />
-        <span>
-          20+ años de datos | 12 índices | Indicadores nacionales e
-          internacionales
-        </span>
+        <strong>20+ años de datos | 12 índices | Indicadores nacionales e internacionales</strong>
       </p>
 
-      <p id="inicioSuperiorParrafoSegundo">
-        Desplegamos los valores diarios e históricos de distintos
-        <strong>índices del mercado</strong>. Haz tu consulta y obtén
-        información valiosa sobre el panorama económico nacional.
-      </p>
+      <div id="informacion-introductoria-iconos">
+        <p class="parrafos-informativos">
+          Desplegamos valores diarios e históricos de distintos
+          <strong>índices del mercado</strong>. Consulta y obtén
+          información valiosa sobre el panorama económico nacional.
+        </p>
+
+        <picture>
+          <img src="./assets/img/svg-grafico.svg" alt="Icono isométrico de un gráfico de torta">
+          <img src="./assets/img/svg-server.svg" alt="Icono isométrico abstracto que representa un servidor">
+        </picture>
+
+      </div>
     </section>
 
-    <section id="inicioInferior">
-      <h2>
+    <section>
+      <h3 class="titulos-incentivo">
         Facilitamos tus decisiones
         <br />
         Actualizamos tus conocimientos
-      </h2>
+      </h3>
 
-      <p>
-        Mantenente actualizado con las últimas
-        <strong>tendencias del mercado</strong> y toma decisiones informadas
-        sobre tus inversiones. Nuestros servicios te proporcionan los datos
-        que necesitas a través de una interfaz fácil de utilizar.
+      <p class="parrafos-informativos">
+        Mantenente actualizado sobre las últimas <strong>tendencias del mercado</strong>. Toma decisiones informadas
+        sobre tus inversiones. Te proporcionamos los datos que necesitas a través de una interfaz simple.
       </p>
     </section>
 
-    <section id="panelInformacion">
+    <section>
+      <h4 class="titulos-de-consultas">Consulta tu índice diario</h4>
 
-      <h4>Consulta tu índice diario</h4>
-      <div id="panelInformacionBotones">
-        <button id="indicesNacionales">
+      <p class="parrafos-informativos">
+        El siguiente método es una versión de prueba: sólo podrás consultar el valor actual del indicador, ya sea diario o mensual. Para realizar consultas más específicas,
+        crea tu perfil y <strong>suscríbete</strong> a uno de nuestros planes.
+      </p>
+
+      <div id="panel-botones">
+        <button id="indices-nacionales">
           Nacionales
         </button>
-        <button id="indicesInternacionales">
+        <button id="indices-internacionales">
           Internacionales
         </button>
       </div>
 
-      <div id="botonesNacionales">
-        <button class="botonIndice" value="uf">
+      <div id="botones-nacionales">
+        <button class="boton-indice" value="uf">
           Unidad de Fomento (UF)
         </button>
-        <button class="botonIndice" value="ipc">
+        <button class="boton-indice" value="ipc">
           Índice de Precio al Consumidor (IPC)
         </button>
-        <button class="botonIndice" value="utm">
+        <button class="boton-indice" value="utm">
           Unidad Tributaria
           <br />
           Mensual (UTM)
         </button>
-        <button class="botonIndice" value="ivp">
+        <button class="boton-indice" value="ivp">
           Índice de Valor
           <br />
           Promedio (IVP)
         </button>
-        <button class="botonIndice" value="imacec">
-          Índice Mensual de Actividad Económica (IMACEC)
+        <button class="boton-indice" value="imacec">
+          Índice Mensual de Act. Económica (IMACEC)
         </button>
-        <button class="botonIndice" value="tpm">
+        <button class="boton-indice" value="tpm">
           Tasa de Política
           <br />
           Monetaria (TPM)
         </button>
-        <button class="botonIndice" value="tasa_desempleo">
+        <button class="boton-indice" value="tasa_desempleo">
           Tasa de Desempleo
         </button>
-        <button class="botonIndice" value="libra_cobre">
+        <button class="boton-indice" value="libra_cobre">
           Libra de Cobre
         </button>
       </div>
 
-      <div id="botonesInternacionales">
-        <button class="botonIndice" value="dolar">
+      <div id="botones-internacionales">
+        <button class="boton-indice" value="dolar">
           Dólar
         </button>
-        <button class="botonIndice" value="dolar_intercambio">
+        <button class="boton-indice" value="dolar_intercambio">
           Dólar de intercambio
         </button>
-        <button class="botonIndice" value="euro">
+        <button class="boton-indice" value="euro">
           Euro
         </button>
-        <button class="botonIndice" value="bitcoin">
+        <button class="boton-indice" value="bitcoin">
           Bitcoin
         </button>
       </div>
 
-      <div id="fechaIndicador">
-        <h4>Selecciona una fecha</h4>
-
-        <input type="date" name="fechaQuery" id="fechaQuery">
-
-        <input type="submit" name="consultarIndice" id="consultarIndice">
-      </div>
+      
 
     </section>
+    <div id="despliegue-respuesta">
+      <input type="submit" name="consultar-indice" id="consultar-indice">
+    </div>
   </main>
 
   <script src="./assets/js/barraNavegacion.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js" defer></script>
+  <!--   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js" defer></script> -->
   <script src="./assets/js/inicio.js" defer></script>
 
 </body>
