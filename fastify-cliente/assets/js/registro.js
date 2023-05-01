@@ -174,7 +174,7 @@ const validaGenero = () => {
         }
     }
     if (!seleccionGenero) {
-        mensajeErrorGenero.innerText = 'Debe seleccionar una opción.';
+        mensajeErrorGenero.innerText = 'Selecciona una opción';
         document.getElementById("genero").insertAdjacentElement("afterend", mensajeErrorGenero);
         document.getElementById("genero").style.backgroundColor = "var(--colorAlertas)";
         validacionesExitosas.validacionGenero = false;
@@ -188,14 +188,9 @@ const validaGenero = () => {
 /* Validación nacimiento */
 
 const validaNacimiento = () => {
-    let seleccionNacimiento = false;
-
-    if (formNacimiento.value) {
-        seleccionNacimiento = true;
-    }
-
-    if (!seleccionNacimiento) {
-        mensajeErrorNacimiento.innerText = 'Debe seleccionar una fecha.';
+    
+    if (!formNacimiento.value) {
+        mensajeErrorNacimiento.innerText = 'Selecciona una fecha';
         formNacimiento.insertAdjacentElement("afterend", mensajeErrorNacimiento);
         formNacimiento.style.backgroundColor = "var(--colorAlertas)";
         validacionesExitosas.validacionNacimiento = false;
@@ -204,6 +199,28 @@ const validaNacimiento = () => {
         formNacimiento.style.backgroundColor = "var(--colorBlanco)";
         validacionesExitosas.validacionNacimiento = true;
     }
+
+    //¿Usuario mayor de 14 años?
+    const fechaNacimiento = new Date(document.getElementById("fecha-nacimiento").value);
+    const hoy = new Date();
+    const edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
+    fechaNacimiento.setFullYear(hoy.getFullYear());
+
+    if (hoy < fechaNacimiento) {
+        edad--;
+    }
+    if (edad < 14) {
+        mensajeErrorNacimiento.innerText = 'Debes ser mayor de 14 años para continuar';
+        formNacimiento.insertAdjacentElement("afterend", mensajeErrorNacimiento);
+        formNacimiento.style.backgroundColor = "var(--colorAlertas)";
+        validacionesExitosas.validacionNacimiento = false;
+    } else {
+        mensajeErrorNacimiento.remove();
+        formNacimiento.style.backgroundColor = "var(--colorBlanco)";
+        validacionesExitosas.validacionNacimiento = true;
+    }
+
+    
 }
 
 formNacimiento.addEventListener("focusout", () => {
@@ -214,7 +231,7 @@ formNacimiento.addEventListener("focusout", () => {
 
 const validarPais = () => {
     if (formPais.value === '') {
-        mensajeErrorPais.innerText = "Selecciona un país."
+        mensajeErrorPais.innerText = "Selecciona un país"
         formPais.insertAdjacentElement('afterend', mensajeErrorPais);
         formPais.style.backgroundColor = "var(--colorAlertas)";
         validacionesExitosas.validacionPais = false;
@@ -246,7 +263,7 @@ formulario.addEventListener("submit", async (submitEvent) => {
     validaNacimiento();
     validarPais();
 
-    if(Object.values(validacionesExitosas).includes(false)){
+    if (Object.values(validacionesExitosas).includes(false)) {
         let mensajeErrorForm = document.createElement("span");
         mensajeErrorForm.innerText = "Antes de registrarte, debes validar los datos ingresados.";
         formulario.insertAdjacentElement("afterend", mensajeErrorForm);
@@ -256,12 +273,12 @@ formulario.addEventListener("submit", async (submitEvent) => {
         const formData = new FormData(formElement);
         const correo = formData.get("correo");
         const contrasena = formData.get("contrasena");
-    
+
         const usuario = {
             correo,
             contrasena,
         };
-    
+
         const baseURL = "http://localhost:3000";
         const url = baseURL + "/registro";
         const fetchConfig = {
@@ -271,7 +288,7 @@ formulario.addEventListener("submit", async (submitEvent) => {
             },
             body: JSON.stringify(usuario),
         };
-    
+
         try {
             const respuesta = await fetch(url, fetchConfig);
             // TODO gestionar errores
@@ -279,7 +296,7 @@ formulario.addEventListener("submit", async (submitEvent) => {
                 console.error("La respuesta no está OK");
                 return;
             }
-    
+
             const objetoJSON = await respuesta.json();
             console.dir(objetoJSON);
         } catch (error) {
