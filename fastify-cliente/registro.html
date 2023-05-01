@@ -13,9 +13,9 @@
 <body>
 
     <nav>
-        <div id="iconoBarras">
-            <img src="./assets/img/barras.svg" alt="">
-        </div>
+        <picture id="iconoBarras">
+            <img src="./assets/img/barras.svg" alt="" id="barras">
+        </picture>
 
         <a href="/inicio.html">
             <h1>Índice Diario</h1>
@@ -30,102 +30,102 @@
     </nav>
 
     <section id="menuLateral">
-        <h2>Menú</h2>
+        <h3>Menú</h3>
         <ol>
             <li><a href="/inicio.html"><img src="./assets/img/casa.svg" alt="">Inicio</a></li>
             <li><a href="/planes.html"><img src="./assets/img/papel.svg" alt="">Planes</a></li>
             <li><a href="/glosario.html"><img src="./assets/img/listado.svg" alt="">Glosario</a></li>
+            <li><a href="/ingreso.html"><img src="./assets/img/ingreso.svg" alt="">Ingresa</a></li>
             <li><a href="/registro.html"><img src="./assets/img/registro.svg" alt="">Regístrate</a></li>
         </ol>
-
     </section>
+    <main>
+        <form method="get" action="registro.html">
+            <h2>Regístrate</h2>
 
-    <form method="get" action="registro.html">
-        <h2>Regístrate</h2>
+            <fieldset id="perfil">
+                <legend>Perfil</legend>
 
-        <fieldset id="perfil">
-            <legend>Perfil</legend>
+                <label for="nombre">Ingresa tu nombre</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Ej: Pablo">
 
-            <label for="nombre">Ingresa tu nombre</label>
-            <input type="text" name="nombre" id="nombre" placeholder="Ej: Pablo">
+                <label for="apellido">Ingresa tu apellido</label>
+                <input type="text" name="apellido" id="apellido" placeholder="Ej: Martínez">
 
-            <label for="apellido">Ingresa tu apellido</label>
-            <input type="text" name="apellido" id="apellido" placeholder="Ej: Martínez">
+                <label for="nombre-usuario">Ingresa tu nombre de usuario (opcional)</label>
+                <input type="text" name="nombre-usuario" id="nombre-usuario" placeholder="Ej: PMartinez">
+            </fieldset>
 
-            <label for="nombre-usuario">Ingresa tu nombre de usuario (opcional)</label>
-            <input type="text" name="nombre-usuario" id="nombre-usuario" placeholder="Ej: PMartinez">
-        </fieldset>
+            <fieldset id="contacto-seguridad">
+                <legend>Contacto y seguridad</legend>
 
-        <fieldset id="contacto-seguridad">
-            <legend>Contacto y seguridad</legend>
+                <label for="correo">Correo electrónico</label>
+                <input type="email" name="correo" id="correo" placeholder="Ej: pablomart@gmail.com">
 
-            <label for="correo">Correo electrónico</label>
-            <input type="email" name="correo" id="correo" placeholder="Ej: pablomart@gmail.com">
+                <label for="contrasena">Contraseña</label>
+                <input type="password" id="contrasena" name="contrasena">
 
-            <label for="contrasena">Contraseña</label>
-            <input type="password" id="contrasena" name="contrasena">
+                <label for="confirmar-contrasena">Confirmar contraseña</label>
+                <input type="password" id="confirmar-contrasena" name="confirmar-contrasena">
+            </fieldset>
 
-            <label for="confirmar-contrasena">Confirmar contraseña</label>
-            <input type="password" id="confirmar-contrasena" name="confirmar-contrasena">
-        </fieldset>
+            <fieldset>
+                <legend>Datos complementarios</legend>
 
-        <fieldset>
-            <legend>Datos complementarios</legend>
+                <div id="genero">
+                    <label for="genero">Género</label>
+                    <div class="div-radio">
+                        <label for="masculino">Masculino</label>
+                        <input type="radio" id="masculino" name="genero" value="masculino" class="genero">
+                    </div>
 
-            <div id="genero">
-                <label for="genero">Género</label>
-                <div class="div-radio">
-                    <label for="masculino">Masculino</label>
-                    <input type="radio" id="masculino" name="genero" value="masculino" class="genero">
+                    <div class="div-radio">
+                        <label for="femenino">Femenino</label>
+                        <input type="radio" id="femenino" name="genero" value="femenino" class="genero">
+                    </div>
+
+                    <div class="div-radio">
+                        <label for="otro">Otro</label>
+                        <input type="radio" id="otro" name="genero" value="otro" class="genero">
+                    </div>
                 </div>
 
-                <div class="div-radio">
-                    <label for="femenino">Femenino</label>
-                    <input type="radio" id="femenino" name="genero" value="femenino" class="genero">
+                <div id="nacimiento-pais">
+                    <div>
+                        <label for="fecha-nacimiento">Fecha de nacimiento</label>
+                        <input type="date" name="fecha-nacimiento" id="fecha-nacimiento">
+                    </div>
+                    <div>
+                        <label for="seleccionar-pais">País de residencia</label>
+                        <select name="pais" id="seleccionar-pais">
+                            <option value="">Selecciona una opción</option>
+                            <option value="chile">Chile</option>
+                            <option value="argentina">Argentina</option>
+                            <option value="peru">Perú</option>
+                            <option value="venezuela">Venezuela</option>
+                            <option value="brasil">Brasil</option>
+                            <option value="colombia">Colombia</option>
+                            <option value="uruguay">Uruguay</option>
+                            <option value="ecuador">Ecuador</option>
+                        </select>
+                    </div>
                 </div>
+            </fieldset>
 
-                <div class="div-radio">
-                    <label for="otro">Otro</label>
-                    <input type="radio" id="otro" name="genero" value="otro" class="genero">
-                </div>
-            </div>
+            <label id="label-terminos-condiciones">
+                <input type="checkbox" name="input-terminos-condiciones" id="input-terminos-condiciones" value="acepta">
+                <br>
+                Acepto los Términos y Condiciones
+            </label>
 
-            <div id="nacimiento-pais">
-                <div>
-                    <label for="fecha-nacimiento">Fecha de nacimiento</label>
-                    <input type="date" name="fecha-nacimiento" id="fecha-nacimiento">
-                </div>
-                <div>
-                    <label for="seleccionar-pais">País de residencia</label>
-                    <select name="pais" id="seleccionar-pais">
-                        <option value="">Selecciona una opción</option>
-                        <option value="chile">Chile</option>
-                        <option value="argentina">Argentina</option>
-                        <option value="peru">Perú</option>
-                        <option value="venezuela">Venezuela</option>
-                        <option value="brasil">Brasil</option>
-                        <option value="colombia">Colombia</option>
-                        <option value="uruguay">Uruguay</option>
-                        <option value="ecuador">Ecuador</option>
-                    </select>
-                </div>
-            </div>
-        </fieldset>
+            <input type="submit" id="boton-submit-registro" value="Regístrate">
+        </form>
 
-        <label id="label-terminos-condiciones">
-            <input type="checkbox" name="input-terminos-condiciones" id="input-terminos-condiciones" value="acepta">
-            <br>
-            Acepto los Términos y Condiciones
-        </label>
-
-        <input type="submit" id="boton-submit-registro" value="Regístrate">
-    </form>
-
-    <p>
-        ¿Ya tienes una cuenta?
-        <a href="/ingreso.html">Ingresa</a>
-    </p>
-
+        <p>
+            ¿Ya tienes una cuenta?
+            <a href="/ingreso.html">Ingresa</a>
+        </p>
+    </main>
     <script src="./assets/js/registro.js" defer> </script>
     <script src="./assets/js/barraNavegacion.js" defer></script>
 </body>
