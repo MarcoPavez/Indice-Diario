@@ -40,63 +40,64 @@
 
     </section>
 
-    <form method="post" id="formRegistro">
+    <form method="get" action="registro.html">
         <h2>Regístrate</h2>
 
         <fieldset id="perfil">
             <legend>Perfil</legend>
 
             <label for="nombre">Ingresa tu nombre</label>
-            <input type="text" name="nombre" id="nombre" placeholder="Ej: Pablo" required>
+            <input type="text" name="nombre" id="nombre" placeholder="Ej: Pablo">
 
             <label for="apellido">Ingresa tu apellido</label>
-            <input type="text" name="apellido" id="apellido" placeholder="Ej: Martínez" required>
+            <input type="text" name="apellido" id="apellido" placeholder="Ej: Martínez">
 
-            <label for="nombreUsuario">Ingresa tu nombre de usuario (opcional)</label>
-            <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Ej: PMartinez">
+            <label for="nombre-usuario">Ingresa tu nombre de usuario (opcional)</label>
+            <input type="text" name="nombre-usuario" id="nombre-usuario" placeholder="Ej: PMartinez">
         </fieldset>
 
-        <fieldset id="contactoSeguridad">
+        <fieldset id="contacto-seguridad">
             <legend>Contacto y seguridad</legend>
 
             <label for="correo">Correo electrónico</label>
-            <input type="email" name="correo" id="correo" placeholder="Ej: pablomart@gmail.com" required>
+            <input type="email" name="correo" id="correo" placeholder="Ej: pablomart@gmail.com">
 
             <label for="contrasena">Contraseña</label>
-            <input type="password" id="contrasena" name="contrasena" required>
+            <input type="password" id="contrasena" name="contrasena">
 
-            <label for="confirmarContrasena">Confirmar contraseña</label>
-            <input type="password" id="confirmarContrasena" name="confirmarContrasena" required>
+            <label for="confirmar-contrasena">Confirmar contraseña</label>
+            <input type="password" id="confirmar-contrasena" name="confirmar-contrasena">
         </fieldset>
 
-        <fieldset id="datosComplementarios">
+        <fieldset>
             <legend>Datos complementarios</legend>
 
-            <div id="datosComplementariosSuperior">
-                <div class="divRadio">
-                    <label for="masculino">Masculino</label>
-                    <input type="radio" id="genero" name="genero" value="masculino">
+            <div id="genero">
+                <label for="genero">Género</label>
+                <div class="div-radio">
+                    <p for="masculino">Masculino</p>
+                    <input type="radio" id="masculino" name="genero" value="masculino" class="genero">
                 </div>
 
-                <div class="divRadio">
-                    <label for="femenino">Femenino</label>
-                    <input type="radio" id="genero" name="genero" value="femenino">
+                <div class="div-radio">
+                    <p for="femenino">Femenino</p>
+                    <input type="radio" id="femenino" name="genero" value="femenino" class="genero">
                 </div>
 
-                <div class="divRadio">
-                    <label for="otro">Otro</label>
-                    <input type="radio" id="genero" name="genero" value="otro">
+                <div class="div-radio">
+                    <p for="otro">Otro</p>
+                    <input type="radio" id="otro" name="genero" value="otro" class="genero">
                 </div>
             </div>
 
-            <div id="datosComplementariosInferior">
+            <div id="nacimiento-pais">
                 <div>
-                    <label for="fechaNacimiento">Fecha de nacimiento</label>
-                    <input type="date" name="fechaNacimiento" id="fechaNacimiento" required>
+                    <label for="fecha-nacimiento">Fecha de nacimiento</label>
+                    <input type="date" name="fecha-nacimiento" id="fecha-nacimiento">
                 </div>
                 <div>
-                    <label for="seleccionarPais">País de residencia</label>
-                    <select name="pais" id="seleccionarPais" required>
+                    <label for="seleccionar-pais">País de residencia</label>
+                    <select name="pais" id="seleccionar-pais">
                         <option value="">Selecciona una opción</option>
                         <option value="chile">Chile</option>
                         <option value="argentina">Argentina</option>
@@ -111,20 +112,19 @@
             </div>
         </fieldset>
 
-        <label id="labelTerminosCondiciones">
-            <input type="checkbox" name="inputTerminosCondiciones" id="inputTerminosCondiciones" value="acepta"
-                required>
+        <label id="label-terminos-condiciones">
+            <input type="checkbox" name="input-terminos-condiciones" id="input-terminos-condiciones" value="acepta">
             <br>
             Acepto los Términos y Condiciones
         </label>
 
-        <input type="submit" id="botonSubmit" value="Regístrate">
-
-        <span>
-            ¿Ya tienes una cuenta?
-            <a href="/ingreso.html">Ingresa</a>
-        </span>
+        <input type="submit" id="boton-submit-registro" value="Regístrate">
     </form>
+
+    <p>
+        ¿Ya tienes una cuenta?
+        <a href="/ingreso.html">Ingresa</a>
+    </p>
 
     <script src="./assets/js/registro.js" defer> </script>
     <script src="./assets/js/barraNavegacion.js" defer></script>

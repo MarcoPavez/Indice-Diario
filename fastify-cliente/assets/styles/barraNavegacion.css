@@ -4,12 +4,14 @@
 
 :root {
   --colorPrincipal: #06062D;
-  --colorComplementario:#2d2d06;
-  --colorAnalogoPrimero:#36506e;
+  --colorComplementario:#2D2D06;
+  --colorAnalogoPrimero:#36506E;
   --colorAnalogoSegundo:#362758;
-  --colorTriadicoPrimero: #530e47;
-  --colorTriadicoSegundo:#5a2925;
-  --colorBlanco: #fff;
+  --colorTriadicoPrimero: #530E47;
+  --colorTriadicoSegundo:#5A2925;
+  --colorAlertas: #DDBCB6;
+  --colorNegro: #252525;
+  --colorBlanco: #FFF;
 } 
 
 /* || Tipografía */
