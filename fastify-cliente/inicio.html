@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/styles/inicio.css">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/barraNavegacion.css">
+  <title>Indice Diario</title>
+</head>
+
+<body>
+
+  <nav>
+    <div id="iconoBarras">
+      <img src="./assets/img/barras.svg" alt="">
+    </div>
+
+    <a href="/inicio.html">
+      <h1>Índice Diario</h1>
+    </a>
+
+    <ul id="listaBarraNavegacion">
+      <li><a href="/inicio.html">Inicio</a></li>
+      <li><a href="/planes.html">Planes</a></li>
+      <li><a href="/glosario.html">Glosario</a></li>
+      <li><a href="/registro.html">Regístrate</a></li>
+    </ul>
+  </nav>
+
+  <section id="menuLateral">
+    <h2>Menú</h2>
+    <ol>
+      <li><a href="/inicio.html"><img src="./assets/img/casa.svg" alt="">Inicio</a></li>
+      <li><a href="/planes.html"><img src="./assets/img/papel.svg" alt="">Planes</a></li>
+      <li><a href="/glosario.html"><img src="./assets/img/listado.svg" alt="">Glosario</a></li>
+      <li><a href="/registro.html"><img src="./assets/img/registro.svg" alt="">Regístrate</a></li>
+    </ol>
+  </section>
+
+  <main>
+    <section id="informacion-introductoria">
+
+      <h3 class="titulos-incentivo">
+        Proveemos la información
+        <br />
+        que necesitas
+      </h3>
+
+      <p class="parrafos-informativos">
+        Consulta los principales indicadores del mercado <br />
+        <strong>20+ años de datos | 12 índices | Indicadores nacionales e internacionales</strong>
+      </p>
+
+      <div id="informacion-introductoria-iconos">
+        <p class="parrafos-informativos">
+          Desplegamos valores diarios e históricos de distintos
+          <strong>índices del mercado</strong>. Consulta y obtén
+          información valiosa sobre el panorama económico nacional.
+        </p>
+
+        <picture>
+          <img src="./assets/img/svg-grafico.svg" alt="Icono isométrico de un gráfico de torta">
+          <img src="./assets/img/svg-server.svg" alt="Icono isométrico abstracto que representa un servidor">
+        </picture>
+
+      </div>
+    </section>
+
+    <section>
+      <h3 class="titulos-incentivo">
+        Facilitamos tus decisiones
+        <br />
+        Actualizamos tus conocimientos
+      </h3>
+
+      <p class="parrafos-informativos">
+        Mantenente actualizado sobre las últimas <strong>tendencias del mercado</strong>. Toma decisiones informadas
+        sobre tus inversiones. Te proporcionamos los datos que necesitas a través de una interfaz simple.
+      </p>
+    </section>
+
+    <section>
+      <h4 class="titulos-de-consultas">Consulta tu índice diario</h4>
+
+      <p class="parrafos-informativos">
+        El siguiente método es una versión de prueba: sólo podrás consultar el valor actual del indicador, ya sea diario o mensual. Para realizar consultas más específicas,
+        crea tu perfil y <strong>suscríbete</strong> a uno de nuestros planes.
+      </p>
+
+      <div id="panel-botones">
+        <button id="indices-nacionales">
+          Nacionales
+        </button>
+        <button id="indices-internacionales">
+          Internacionales
+        </button>
+      </div>
+
+      <div id="botones-nacionales">
+        <button class="boton-indice" value="uf">
+          Unidad de Fomento (UF)
+        </button>
+        <button class="boton-indice" value="ipc">
+          Índice de Precio al Consumidor (IPC)
+        </button>
+        <button class="boton-indice" value="utm">
+          Unidad Tributaria
+          <br />
+          Mensual (UTM)
+        </button>
+        <button class="boton-indice" value="ivp">
+          Índice de Valor
+          <br />
+          Promedio (IVP)
+        </button>
+        <button class="boton-indice" value="imacec">
+          Índice Mensual de Act. Económica (IMACEC)
+        </button>
+        <button class="boton-indice" value="tpm">
+          Tasa de Política
+          <br />
+          Monetaria (TPM)
+        </button>
+        <button class="boton-indice" value="tasa_desempleo">
+          Tasa de Desempleo
+        </button>
+        <button class="boton-indice" value="libra_cobre">
+          Libra de Cobre
+        </button>
+      </div>
+
+      <div id="botones-internacionales">
+        <button class="boton-indice" value="dolar">
+          Dólar
+        </button>
+        <button class="boton-indice" value="dolar_intercambio">
+          Dólar de intercambio
+        </button>
+        <button class="boton-indice" value="euro">
+          Euro
+        </button>
+        <button class="boton-indice" value="bitcoin">
+          Bitcoin
+        </button>
+      </div>
+
+      
+
+    </section>
+    <div id="despliegue-respuesta">
+      <input type="submit" name="consultar-indice" id="consultar-indice">
+    </div>
+  </main>
+
+  <script src="./assets/js/barraNavegacion.js" defer></script>
+  <!--   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js" defer></script> -->
+  <script src="./assets/js/inicio.js" defer></script>
+
+</body>
+
+</html>

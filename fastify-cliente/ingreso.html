@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/styles/ingreso.css">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/barraNavegacion.css">
+  <title>Indice Diario</title>
+</head>
+<body>
+
+  <nav>
+    <div id="iconoBarras">
+      <img src="./assets/img/barras.svg" alt="">
+    </div>
+    <a href="/inicio.html">
+      <h1>Índice Diario</h1>
+    </a>
+    <ul id="listaBarraNavegacion">
+      <li><a href="/inicio.html">Inicio</a></li>
+      <li><a href="/planes.html">Planes</a></li>
+      <li><a href="/glosario.html">Glosario</a></li>
+      <li><a href="/registro.html">Regístrate</a></li>
+    </ul>
+  </nav>
+
+  <section id="menuLateral">
+    <h2>Menú</h2>
+    <ol>
+      <li>
+        <a href="/inicio.html">
+          <img src="./assets/img/casa.svg" alt="">
+          Inicio
+        </a>
+      </li>
+      <li>
+        <a href="/planes.html">
+          <img src="./assets/img/papel.svg" alt="">
+          Planes
+        </a>
+      </li>
+      <li>
+        <a href="/glosario.html">
+          <img src="./assets/img/listado.svg" alt="">
+          Glosario
+        </a>
+      </li>
+      <li>
+        <a href="/registro.html">
+          <img src="./assets/img/registro.svg" alt="">
+          Regístrate
+        </a>
+      </li>
+    </ol>
+  </section>
+  
+  <form id="formIngreso">
+    <h2>Ingresa</h2>
+    <label for="correo">Ingresa tu correo electrónico o nombre de usuario</label>
+    <input type="email" name="correo" id="correo" required>
+    <label for="contrasena">Ingresa tu contraseña</label>
+    <input type="password" name="contrasena" id="contrasena" required>
+    <input type="submit" id="botonIngreso">Ingresa
+    <span>
+      ¿No tienes una cuenta?
+        <a href="/registro.html">Regístrate</a>
+    </span>
+  </form>
+
+  <script src="./assets/js/ingreso.js" defer></script>
+  <script src="./assets/js/barraNavegacion.js" defer></script>
+
+</body>
+</html>
