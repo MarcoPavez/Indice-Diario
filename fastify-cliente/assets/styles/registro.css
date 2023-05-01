@@ -1,4 +1,4 @@
-#formRegistro {
+form {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
   flex-wrap: wrap;
@@ -16,7 +16,7 @@ fieldset {
 }
 
 #perfil input,
-#contactoSeguridad input {
+#contacto-seguridad input {
   font-size: 2.2vw;
 }
 
@@ -48,18 +48,18 @@ h2 {
   margin-top: 3vw;
 }
 
-#datosComplementariosSuperior {
+#genero {
   display: flex;
   flex-direction: column;
 }
 
-#datosComplementariosSuperior input {
+#genero input {
   margin: 0;
   width: 2.5vw;
   height: 2.5vw;
 }
 
-.divRadio {
+.div-radio {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -70,19 +70,19 @@ h2 {
   width: 75%;
 }
 
-#datosComplementariosInferior {
+#nacimiento-pais {
   display: flex;
   flex-direction: row;
   gap: 8vw;
   
 }
 
-#datosComplementariosInferior label {
+#nacimiento-pais label {
   font-size: 3vw;
 }
 
-#seleccionarPais,
-#fechaNacimiento {
+#seleccionar-pais,
+#fecha-nacimiento {
   border-radius: 5px;
   border-width: 1px;
   border-color: black;
@@ -93,19 +93,19 @@ h2 {
   padding: 1vw;
 }
 
-#labelTerminosCondiciones {
+#label-terminos-condiciones {
   font-size: 2.5vw;
   text-align: center;
   transform: translateX(32vw);
 }
 
-#inputTerminosCondiciones {
+#input-terminos-condiciones {
   width: 2.5vw;
   height: 2.5vw;
   cursor: pointer;
 }
 
-#botonSubmit {
+#boton-submit-registro {
   grid-column: 1 / -1;
   padding: 1vw;
   border: none;
@@ -118,15 +118,24 @@ h2 {
   transform: translateX(23vw);
 }
 
-#formRegistro span:last-child {
+p {
+  display: block;
   width: 50vw;
   transform: translateX(22vw);
   font-size: 3vw;
   text-align: center;
 }
 
+span{
+  display: block;
+  text-align: center;
+  font-size: 2.25vw;
+  font-weight: 500;
+  margin-bottom: 2vw;
+}
+
 @media (max-width: 390px) {
-  #formRegistro {
+  form {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(17.5vw, 1fr));
     gap: 20px;
@@ -134,8 +143,8 @@ h2 {
     margin-top: 15vw;
   }
 
-  #seleccionarPais,
-  #fechaNacimiento {
+  #seleccionar-pais,
+  #fecha-nacimiento {
     width: 30vw;
   }
 }
