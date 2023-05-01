@@ -186,10 +186,16 @@ const validaGenero = () => {
 }
 
 /* Validación nacimiento */
-
+formNacimiento.value = "";
 const validaNacimiento = () => {
     
-    if (!formNacimiento.value) {
+    let seleccionNacimiento = false;
+
+    if (formNacimiento.value !== "") {
+        seleccionNacimiento = true;
+    }
+
+    if (!seleccionNacimiento) {
         mensajeErrorNacimiento.innerText = 'Selecciona una fecha';
         formNacimiento.insertAdjacentElement("afterend", mensajeErrorNacimiento);
         formNacimiento.style.backgroundColor = "var(--colorAlertas)";
@@ -219,13 +225,12 @@ const validaNacimiento = () => {
         formNacimiento.style.backgroundColor = "var(--colorBlanco)";
         validacionesExitosas.validacionNacimiento = true;
     }
-
-    
 }
 
 formNacimiento.addEventListener("focusout", () => {
     validaNacimiento();
 })
+
 
 /* Validación país */
 
@@ -247,8 +252,11 @@ formPais.addEventListener("focusout", () => {
 })
 
 /* METODO POST PARA REGISTRO USUARIO */
-
 const formulario = document.querySelector("form");
+
+let mensajeErrorForm = document.createElement("span");
+formulario.insertAdjacentElement("afterend", mensajeErrorForm);
+
 formulario.addEventListener("submit", async (submitEvent) => {
     submitEvent.preventDefault();
 
@@ -263,12 +271,12 @@ formulario.addEventListener("submit", async (submitEvent) => {
     validaNacimiento();
     validarPais();
 
-    if (Object.values(validacionesExitosas).includes(false)) {
-        let mensajeErrorForm = document.createElement("span");
+
+    if (Object.values(validacionesExitosas).includes(false)) {    
         mensajeErrorForm.innerText = "Antes de registrarte, debes validar los datos ingresados.";
-        formulario.insertAdjacentElement("afterend", mensajeErrorForm);
     } else {
         mensajeErrorForm.remove();
+
         const formElement = submitEvent.currentTarget;
         const formData = new FormData(formElement);
         const correo = formData.get("correo");

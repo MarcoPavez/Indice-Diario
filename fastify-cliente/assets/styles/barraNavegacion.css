@@ -40,8 +40,8 @@ nav {
   z-index: 3;
 }
 
-img {
-  width: 20%;
+#barras {
+  width: 100%;
 }
 
 #iconoBarras {
@@ -49,7 +49,6 @@ img {
   right: 28.5vw;
   top: 0.5vw;
   width: 4vw;
-  fill: var(--colorBlanco);
 }
 
 
@@ -59,7 +58,7 @@ img {
 #menuLateral{
   background-color: #b7bccd;
   height: 100%;
-  width: 30%;
+  width: 27.5%;
   position: absolute;
   z-index: 2;
   left: 0;
@@ -97,6 +96,12 @@ a{
   text-decoration: none;
 }
 
+#menuLateral h3{
+  margin-top: 12vw;
+  margin-right: 1vw;
+  text-align: center;
+}
+
 ol{
   display: flex;
   justify-content: center;
@@ -104,8 +109,7 @@ ol{
   list-style: none;
   gap: 5vw;
   padding: 0;
-  margin-left: 6vw;
-  margin-top: 13vw;
+  margin-left: 3.5vw;
 }
 
 ol li{
@@ -115,25 +119,20 @@ ol li{
 }
 
 li a{
+  display: flex;
+  align-items: center;
   color: var(--colorPrincipal);
   font-weight: 500;
-  font-size: 2.8vw;
+  font-size: 2.85vw;
   width: 100%;
   text-align: left;
 }
 
-li svg{
-  width: 2.5vw;
+li img{
+  width: 3.5vw;
   height: auto;
-  margin-right: 2vw;
-  fill: var(--colorTriadicoPrimero);
+  margin-right: 1vw;
 }
-
-li:nth-of-type(2) svg{
-  height: 2.45vw;
-}
-
-
 
 /* END MENU LATERAL */
 
