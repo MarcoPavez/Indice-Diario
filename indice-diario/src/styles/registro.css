@@ -1,14 +1,4 @@
-:root {
-  --colorPrincipal: #21295c;
-  --colorBlanco: #fff;
-  --gradiente: linear-gradient(
-    86deg,
-    rgba(248, 132, 91, 1) 0%,
-    rgba(249, 167, 93, 1) 85%
-  );
-}
-
-#formRegistro {
+form {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
   flex-wrap: wrap;
@@ -25,7 +15,8 @@ fieldset {
   grid-column: span 3;
 }
 
-#perfil input, #contactoSeguridad input{
+#perfil input,
+#contacto-seguridad input {
   font-size: 2.2vw;
 }
 
@@ -43,8 +34,8 @@ legend {
 }
 
 label {
-  margin-bottom: 5px;
-  font-weight: 400;
+  margin-bottom: 2vw;
+  font-weight: 500;
   font-size: 3vw;
 }
 
@@ -55,18 +46,18 @@ h2 {
   font-size: 5vw;
 }
 
-#datosComplementariosSuperior {
+#genero {
   display: flex;
   flex-direction: column;
 }
 
-#datosComplementariosSuperior input {
-  margin:0;
+#genero input {
+  margin: 0;
   width: 2.5vw;
   height: 2.5vw;
 }
 
-.divRadio {
+.div-radio {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -77,19 +68,18 @@ h2 {
   width: 75%;
 }
 
-#datosComplementariosInferior {
+#nacimiento-pais {
   display: flex;
   flex-direction: row;
   gap: 10vw;
 }
 
-#datosComplementariosInferior label {
+#nacimiento-pais label {
   font-size: 3vw;
 }
 
-#seleccionarPais,
-#fechaNacimiento {
-  padding: 1vw;
+#seleccionar-pais,
+#fecha-nacimiento {
   border-radius: 5px;
   border-width: 1px;
   border-color: black;
@@ -105,19 +95,19 @@ span {
   text-align: center;
 }
 
-#labelTerminosCondiciones {
+#label-terminos-condiciones {
   font-size: 2.5vw;
   text-align: center;
   transform: translateX(32vw);
 }
 
-#inputTerminosCondiciones{
+#input-terminos-condiciones {
   width: 2.5vw;
   height: 2.5vw;
   cursor: pointer;
 }
 
-#botonSubmit {
+#boton-submit-registro {
   grid-column: 1 / -1;
   padding: 1vw;
   border: none;
@@ -130,15 +120,23 @@ span {
   transform: translateX(23vw);
 }
 
-#formRegistro span:last-child {
-  width: 50vw;
-  transform: translateX(22vw);
+p {
+  display: block;
   font-size: 3vw;
+  text-align: center;
+  margin: 0;
 }
 
+span{
+  font-size: 2.5vw;
+  display: block;
+  text-align: center;
+  margin-bottom: 2vw;
+  font-weight: 400;
+}
 
-@media (max-width:320px) {
-  #formRegistro {
+@media (max-width: 390px) {
+  form {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
     flex-wrap: wrap;
@@ -147,9 +145,9 @@ span {
     margin-top: 15vw;
   }
 
-  #seleccionarPais,
-#fechaNacimiento {
- 
-  width: 30vw;
+  #seleccionar-pais,
+  #fecha-nacimiento {
+    width: 30vw;
+  }
 }
-}
+
