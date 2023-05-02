@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react"
 
-export default function ListaConsultas() {
-
-    const [consultas, setConsultas] = useState([]);
+export default function ListaConsultas({consultas, setConsultas}) {
 
     const cargarDatos = async () => {
         try {
