@@ -61,11 +61,14 @@
   <main>
     <form id="formIngreso">
       <h2>Ingresa</h2>
-      <label for="correo">Ingresa tu correo electrónico o nombre de usuario</label>
-      <input type="email" name="correo" id="correo" required>
-      <label for="contrasena">Ingresa tu contraseña</label>
-      <input type="password" name="contrasena" id="contrasena" required>
-      <input type="submit" id="botonIngreso">Ingresa
+      <fieldset>
+        <legend>Perfil</legend>
+        <label for="correo">Ingresa tu correo electrónico</label>
+        <input type="email" name="correo" id="correo" required>
+        <label for="contrasena">Ingresa tu contraseña</label>
+        <input type="password" name="contrasena" id="contrasena" required>
+      </fieldset>
+      <input type="submit" id="botonIngreso" value="Ingresa">
       <span>
         ¿No tienes una cuenta?
         <a href="/registro.html">Regístrate</a>

@@ -1,8 +1,7 @@
 form {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
-  flex-wrap: wrap;
-  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
   padding: 1vw;
   margin-top: 5vw;
 }
@@ -12,7 +11,6 @@ fieldset {
   flex-direction: column;
   justify-content: center;
   padding: 2vw;
-  grid-column: span 3;
 }
 
 #perfil input,
@@ -40,8 +38,6 @@ label {
 }
 
 h2 {
-  grid-column-start: 1;
-  grid-column-end: -1;
   text-align: center;
   font-size: 5vw;
   margin: 0;
@@ -96,7 +92,7 @@ h2 {
 #label-terminos-condiciones {
   font-size: 2.5vw;
   text-align: center;
-  transform: translateX(32vw);
+
 }
 
 #input-terminos-condiciones {
@@ -106,7 +102,6 @@ h2 {
 }
 
 #boton-submit-registro {
-  grid-column: 1 / -1;
   padding: 1vw;
   border: none;
   border-radius: 5px;
@@ -115,13 +110,10 @@ h2 {
   font-size: 4vw;
   cursor: pointer;
   width: 50%;
-  transform: translateX(23vw);
 }
 
 p {
   display: block;
-  width: 50vw;
-  transform: translateX(22vw);
   font-size: 3vw;
   text-align: center;
 }
@@ -136,15 +128,9 @@ span{
 
 @media (max-width: 390px) {
   form {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(17.5vw, 1fr));
     gap: 20px;
-    padding: 20px;
+    padding: 1vw;
     margin-top: 15vw;
   }
 
-  #seleccionar-pais,
-  #fecha-nacimiento {
-    width: 30vw;
-  }
 }
