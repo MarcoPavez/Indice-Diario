@@ -1,47 +1,38 @@
+/* Atributos de estructura */
+main{
+  padding-inline: 2vw;
+}
+
 form {
   display: flex;
   flex-direction: column;
-  gap: 2vw;
+
+  gap: 5vw;
+  margin-top: 10vw;
   padding: 1vw;
+}
+
+h2 {
+  margin: 0;
   margin-top: 5vw;
+  margin-bottom: 3vw;
 }
 
 fieldset {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   padding: 2vw;
 }
 
-#perfil input,
-#contacto-seguridad input {
-  font-size: 2.2vw;
-}
-
-fieldset input {
-  padding: 1vw;
-  border-radius: 5px;
-  border-width: 1px;
-  border-color: black;
-  border-style: solid;
-  margin-bottom: 2vw;
-}
-
-legend {
-  font-size: 3.5vw;
-}
-
 label {
-  margin-bottom: 5px;
-  font-weight: 400;
-  font-size: 3vw;
+  margin-bottom: 1vw;
 }
-
-h2 {
-  text-align: center;
-  font-size: 5vw;
-  margin: 0;
-  margin-top: 3vw;
+ 
+.inputs-escritos {
+  margin-bottom: 2vw;
+  padding: 1vw;
 }
 
 #genero {
@@ -49,81 +40,108 @@ h2 {
   flex-direction: column;
 }
 
-#genero input {
-  margin: 0;
-  width: 2.5vw;
-  height: 2.5vw;
-}
-
-.div-radio {
+.contenedor-opciones-genero {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1vw;
-  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  
+  gap: 1vw;
   margin-bottom: 2vw;
   width: 75%;
 }
 
-#nacimiento-pais {
-  display: flex;
-  flex-direction: row;
-  gap: 8vw;
-  
+.opcion-genero {
+  height: 2.5vw;
+  width: 2.5vw;
+  margin: 0;
 }
 
-#nacimiento-pais label {
-  font-size: 3vw;
+#nacimiento-pais {
+  display: flex;
+  gap: 10vw;
 }
 
 #seleccionar-pais,
 #fecha-nacimiento {
-  border-radius: 5px;
-  border-width: 1px;
-  border-color: black;
-  border-style: solid;
   margin-bottom: 2vw;
-  font-size: 2.5vw;
-  width: 35vw;
   padding: 1vw;
+  width: 35vw;
+}
+
+#input-terminos-condiciones {
+  height: 2.5vw;
+  width: 2.5vw;
+}
+
+#boton-submit-registro {
+  padding: 1vw;
+  width: 50%;
+}
+
+span {
+  display: block;
+}
+
+/* Atributos de estilo */
+
+.inputs-escritos {
+  font-size: 2.2vw;
+  border-color: black;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+legend {
+  font-size: 3.5vw;
+}
+
+label {
+  font-size: 3vw;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 5vw;
+  text-align: center;
+}
+
+#seleccionar-pais,
+#fecha-nacimiento {
+  border-color: black;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 2.5vw;
 }
 
 #label-terminos-condiciones {
   font-size: 2.5vw;
   text-align: center;
-
 }
 
 #input-terminos-condiciones {
-  width: 2.5vw;
-  height: 2.5vw;
   cursor: pointer;
 }
 
 #boton-submit-registro {
-  padding: 1vw;
+  background-color: var(--colorPrincipal);
   border: none;
   border-radius: 5px;
-  background-color: var(--colorPrincipal);
   color: #fff;
-  font-size: 4vw;
   cursor: pointer;
-  width: 50%;
+  font-size: 4vw;
 }
 
 p {
-  display: block;
   font-size: 3vw;
   text-align: center;
 }
 
-span{
-  display: block;
-  text-align: center;
+span {
   font-size: 2.25vw;
   font-weight: 500;
-  margin-bottom: 2vw;
+  text-align: center;
 }
 
 @media (max-width: 390px) {

@@ -1,22 +1,22 @@
-document.getElementById("menuLateral").style.display = "none"
+document.getElementById("menu-lateral").style.display = "none"
 
-const menu = document.getElementById("iconoBarras")
-const lateral = document.getElementById("menuLateral")
+const iconoBarras = document.getElementById("contenedor-icono-barras")
+const lateral = document.getElementById("menu-lateral")
 let activado = false;
 
-menu.addEventListener("click", () => {
-    document.getElementById("menuLateral").classList.remove("dontshow");
-    document.getElementById("menuLateral").style.display = "block";
-    document.getElementById("menuLateral").classList.add("show");
+iconoBarras.addEventListener("click", () => {
+    lateral.classList.remove("dontshow");
+    lateral.style.display = "block";
+    lateral.classList.add("show");
     activado = true
 })
 
 document.addEventListener("click", (event) => {
-    if (!menu.contains(event.target) && !lateral.contains(event.target)) {
-        document.getElementById("menuLateral").classList.remove("show");
-        document.getElementById("menuLateral").classList.add("dontshow");
+    if (!iconoBarras.contains(event.target) && !lateral.contains(event.target)) {
+        lateral.classList.remove("show");
+        lateral.classList.add("dontshow");
         setTimeout(() => {
-            document.getElementById("menuLateral").style.display = "none";
+            lateral.style.display = "none";
         }, 350)
     }
 });

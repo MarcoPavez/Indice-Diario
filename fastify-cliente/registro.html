@@ -7,37 +7,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/styles/registro.css">
     <link rel="stylesheet" type="text/css" href="./assets/styles/barraNavegacion.css">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/estiloGeneral.css">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/piePagina.css">
     <title>Indice Diario</title>
 </head>
 
 <body>
 
     <nav>
-        <picture id="iconoBarras">
-            <img src="./assets/img/barras.svg" alt="" id="barras">
+
+        <picture id="contenedor-icono-barras">
+            <img src="./assets/img/barras.svg" alt="" id="icono-barras">
         </picture>
-
         <a href="/inicio.html">
-            <h1>Índice Diario</h1>
+            <h1 id="titulo-principal">Índice Diario</h1>
         </a>
-
-        <ul id="listaBarraNavegacion">
+        <ul id="lista-barra-navegacion">
             <li><a href="/inicio.html">Inicio</a></li>
             <li><a href="/planes.html">Planes</a></li>
             <li><a href="/glosario.html">Glosario</a></li>
             <li><a href="/registro.html">Regístrate</a></li>
         </ul>
+
     </nav>
 
-    <section id="menuLateral">
+    <section id="menu-lateral">
         <h3>Menú</h3>
-        <ol>
-            <li><a href="/inicio.html"><img src="./assets/img/casa.svg" alt="">Inicio</a></li>
-            <li><a href="/planes.html"><img src="./assets/img/papel.svg" alt="">Planes</a></li>
-            <li><a href="/glosario.html"><img src="./assets/img/listado.svg" alt="">Glosario</a></li>
-            <li><a href="/ingreso.html"><img src="./assets/img/ingreso.svg" alt="">Ingresa</a></li>
-            <li><a href="/registro.html"><img src="./assets/img/registro.svg" alt="">Regístrate</a></li>
-        </ol>
+        <ul id="lista-menu-lateral">
+            <li>
+                <a href="/inicio.html" class="links-menu-lateral">
+                    <img src="./assets/img/casa.svg" alt="" class="iconos-menu-lateral">
+                    Inicio
+                </a>
+            </li>
+            <li>
+                <a href="/planes.html" class="links-menu-lateral">
+                    <img src="./assets/img/papel.svg" alt="" class="iconos-menu-lateral">
+                    Planes
+                </a>
+            </li>
+            <li>
+                <a href="/glosario.html" class="links-menu-lateral">
+                    <img src="./assets/img/listado.svg" alt="" class="iconos-menu-lateral">
+                    Glosario
+                </a>
+            </li>
+            <li>
+                <a href="/ingreso.html" class="links-menu-lateral">
+                    <img src="./assets/img/ingreso.svg" alt="" class="iconos-menu-lateral">
+                    Ingresa
+                </a>
+            </li>
+            <li>
+                <a href="/registro.html" class="links-menu-lateral">
+                    <img src="./assets/img/registro.svg" alt="" class="iconos-menu-lateral">
+                    Regístrate
+                </a>
+            </li>
+        </ul>
     </section>
     <main>
         <form method="get" action="registro.html">
@@ -47,26 +74,28 @@
                 <legend>Perfil</legend>
 
                 <label for="nombre">Ingresa tu nombre</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Ej: Pablo">
+                <input type="text" name="nombre" id="nombre" class="inputs-escritos" placeholder="Ej: Pablo">
 
                 <label for="apellido">Ingresa tu apellido</label>
-                <input type="text" name="apellido" id="apellido" placeholder="Ej: Martínez">
+                <input type="text" name="apellido" id="apellido" class="inputs-escritos" placeholder="Ej: Martínez">
 
                 <label for="nombre-usuario">Ingresa tu nombre de usuario (opcional)</label>
-                <input type="text" name="nombre-usuario" id="nombre-usuario" placeholder="Ej: PMartinez">
+                <input type="text" name="nombre-usuario" id="nombre-usuario" class="inputs-escritos"
+                    placeholder="Ej: PMartinez">
             </fieldset>
 
             <fieldset id="contacto-seguridad">
                 <legend>Contacto y seguridad</legend>
 
                 <label for="correo">Correo electrónico</label>
-                <input type="email" name="correo" id="correo" placeholder="Ej: pablomart@gmail.com">
+                <input type="email" name="correo" id="correo" class="inputs-escritos"
+                    placeholder="Ej: pablomart@gmail.com">
 
                 <label for="contrasena">Contraseña</label>
-                <input type="password" id="contrasena" name="contrasena">
+                <input type="password" name="contrasena" id="contrasena" class="inputs-escritos">
 
                 <label for="confirmar-contrasena">Confirmar contraseña</label>
-                <input type="password" id="confirmar-contrasena" name="confirmar-contrasena">
+                <input type="password" name="confirmar-contrasena" id="confirmar-contrasena" class="inputs-escritos">
             </fieldset>
 
             <fieldset>
@@ -74,19 +103,19 @@
 
                 <div id="genero">
                     <label for="genero">Género</label>
-                    <div class="div-radio">
+                    <div class="contenedor-opciones-genero">
                         <label for="masculino">Masculino</label>
-                        <input type="radio" id="masculino" name="genero" value="masculino" class="genero">
+                        <input type="radio" name="masculino" id="masculino" class="opcion-genero" value="masculino">
                     </div>
 
-                    <div class="div-radio">
+                    <div class="contenedor-opciones-genero">
                         <label for="femenino">Femenino</label>
-                        <input type="radio" id="femenino" name="genero" value="femenino" class="genero">
+                        <input type="radio" name="femenino" id="femenino" class="opcion-genero" value="femenino">
                     </div>
 
-                    <div class="div-radio">
+                    <div class="contenedor-opciones-genero">
                         <label for="otro">Otro</label>
-                        <input type="radio" id="otro" name="genero" value="otro" class="genero">
+                        <input type="radio" name="otro" id="otro" class="opcion-genero" value="otro">
                     </div>
                 </div>
 
@@ -113,11 +142,12 @@
             </fieldset>
 
             <label id="label-terminos-condiciones">
-                <input type="checkbox" name="input-terminos-condiciones" id="input-terminos-condiciones" value="acepta">
-          
-                <p>Acepto los Términos y Condiciones</p>
-                
-            <input type="submit" id="boton-submit-registro" value="Regístrate">
+                <input type="checkbox" name="input-terminos-condiciones" id="input-terminos-condiciones"
+                    value="acepta"><br>
+
+                <label>Acepto los Términos y Condiciones</label><br><br>
+
+                <input type="submit" id="boton-submit-registro" value="Regístrate">
             </label>
 
         </form>
@@ -127,6 +157,39 @@
             <a href="/ingreso.html">Ingresa</a>
         </p>
     </main>
+        <footer id="footer">
+
+            <div id="contenedor-links">
+        
+              <div id="footer-links">
+                <ul id="footer-lista">
+                  <li>
+                    <a class="footer-link" href="./inicio.html">Inicio</a>
+                  </li>
+                  <li>
+                    <a class="footer-link" href="./planes.html">Planes</a>
+                  </li>
+                  <li>
+                    <a class="footer-link" href="./glosario.html">Glosario</a>
+                  </li>
+                  <li>
+                    <a class="footer-link" href="./ingreso.html">Ingresa</a>
+                  </li>
+                  <li>
+                    <a class="footer-link" href="./registro.html">Regístrate</a>
+                  </li>
+                </ul>
+              </div>
+        
+              <p id="footer-parrafo">Indice Diario &copy; 2023</p>
+            </div>
+        
+          </footer>
+    
+    
+
+    
+
     <script src="./assets/js/registro.js" defer> </script>
     <script src="./assets/js/barraNavegacion.js" defer></script>
 </body>

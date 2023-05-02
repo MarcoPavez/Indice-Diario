@@ -7,38 +7,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/styles/inicio.css">
   <link rel="stylesheet" type="text/css" href="./assets/styles/barraNavegacion.css">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/estiloGeneral.css">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/piePagina.css">
   <title>Indice Diario</title>
 </head>
 
 <body>
+  <header>
+    <nav>
+      <picture id="contenedor-icono-barras">
+        <img src="./assets/img/barras.svg" alt="" id="icono-barras">
+      </picture>
+      <a href="/inicio.html">
+        <h1 id="titulo-principal">Índice Diario</h1>
+      </a>
+      <ul id="lista-barra-navegacion">
+        <li><a href="/inicio.html">Inicio</a></li>
+        <li><a href="/planes.html">Planes</a></li>
+        <li><a href="/glosario.html">Glosario</a></li>
+        <li><a href="/registro.html">Regístrate</a></li>
+      </ul>
 
-  <nav>
-    <picture id="iconoBarras">
-      <img src="./assets/img/barras.svg" alt="" id="barras">
-  </picture>
+    </nav>
+  </header>
 
-    <a href="/inicio.html">
-      <h1>Índice Diario</h1>
-    </a>
-
-    <ul id="listaBarraNavegacion">
-      <li><a href="/inicio.html">Inicio</a></li>
-      <li><a href="/planes.html">Planes</a></li>
-      <li><a href="/glosario.html">Glosario</a></li>
-      <li><a href="/registro.html">Regístrate</a></li>
-    </ul>
-  </nav>
-
-  <section id="menuLateral">
+  <section id="menu-lateral">
     <h3>Menú</h3>
-    <ol>
-      <li><a href="/inicio.html"><img src="./assets/img/casa.svg" alt="">Inicio</a></li>
-      <li><a href="/planes.html"><img src="./assets/img/papel.svg" alt="">Planes</a></li>
-      <li><a href="/glosario.html"><img src="./assets/img/listado.svg" alt="">Glosario</a></li>
-      <li><a href="/ingreso.html"><img src="./assets/img/ingreso.svg" alt="">Ingresa</a></li>
-      <li><a href="/registro.html"><img src="./assets/img/registro.svg" alt="">Regístrate</a></li>
-    </ol>
+    <ul id="lista-menu-lateral">
+      <li>
+        <a href="/inicio.html" class="links-menu-lateral">
+          <img src="./assets/img/casa.svg" alt="" class="iconos-menu-lateral">
+          Inicio
+        </a>
+      </li>
+      <li>
+        <a href="/planes.html" class="links-menu-lateral">
+          <img src="./assets/img/papel.svg" alt="" class="iconos-menu-lateral">
+          Planes
+        </a>
+      </li>
+      <li>
+        <a href="/glosario.html" class="links-menu-lateral">
+          <img src="./assets/img/listado.svg" alt="" class="iconos-menu-lateral">
+          Glosario
+        </a>
+      </li>
+      <li>
+        <a href="/ingreso.html" class="links-menu-lateral">
+          <img src="./assets/img/ingreso.svg" alt="" class="iconos-menu-lateral">
+          Ingresa
+        </a>
+      </li>
+      <li>
+        <a href="/registro.html" class="links-menu-lateral">
+          <img src="./assets/img/registro.svg" alt="" class="iconos-menu-lateral">
+          Regístrate
+        </a>
+      </li>
+    </ul>
   </section>
+
 
   <main>
     <section id="informacion-introductoria">
@@ -86,7 +114,8 @@
       <h4 class="titulos-de-consultas">Consulta tu índice diario</h4>
 
       <p class="parrafos-informativos">
-        El siguiente método es una versión de prueba: sólo podrás consultar el valor actual del indicador, ya sea diario o mensual. Para realizar consultas más específicas,
+        El siguiente método es una versión de prueba: sólo podrás consultar el valor actual del indicador, ya sea diario
+        o mensual. Para realizar consultas más específicas,
         crea tu perfil y <strong>suscríbete</strong> a uno de nuestros planes.
       </p>
 
@@ -147,13 +176,43 @@
         </button>
       </div>
 
-      
+
 
     </section>
     <div id="despliegue-respuesta">
       <input type="submit" name="consultar-indice" id="consultar-indice">
     </div>
   </main>
+
+  <footer id="footer">
+
+    <div id="contenedor-links">
+
+      <div id="footer-links">
+        <ul id="footer-lista">
+          <li>
+            <a class="footer-link" href="./inicio.html">Inicio</a>
+          </li>
+          <li>
+            <a class="footer-link" href="./planes.html">Planes</a>
+          </li>
+          <li>
+            <a class="footer-link" href="./glosario.html">Glosario</a>
+          </li>
+          <li>
+            <a class="footer-link" href="./ingreso.html">Ingresa</a>
+          </li>
+          <li>
+            <a class="footer-link" href="./registro.html">Regístrate</a>
+          </li>
+        </ul>
+      </div>
+
+      <p id="footer-parrafo">Indice Diario &copy; 2023</p>
+    </div>
+
+  </footer>
+
 
   <script src="./assets/js/barraNavegacion.js" defer></script>
   <!--   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js" defer></script> -->

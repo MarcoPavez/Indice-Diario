@@ -2,151 +2,192 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/styles/planes.css">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/barraNavegacion.css">
-    <title>Indice Diario</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/barraNavegacion.css">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/estiloGeneral.css">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/piePagina.css">
+  <link rel="stylesheet" href="./assets/styles/planes.css">
+  <title>Indice Diario</title>
 </head>
 
 <body>
-    <nav>
-        <picture id="iconoBarras">
-            <img src="./assets/img/barras.svg" alt="" id="barras">
-        </picture>
-        <a href="/inicio.html">
-            <h1>Índice Diario</h1>
+  <nav>
+
+    <picture id="contenedor-icono-barras">
+      <img src="./assets/img/barras.svg" alt="" id="icono-barras">
+    </picture>
+    <a href="/inicio.html">
+      <h1 id="titulo-principal">Índice Diario</h1>
+    </a>
+    <ul id="lista-barra-navegacion">
+      <li><a href="/inicio.html">Inicio</a></li>
+      <li><a href="/planes.html">Planes</a></li>
+      <li><a href="/glosario.html">Glosario</a></li>
+      <li><a href="/registro.html">Regístrate</a></li>
+    </ul>
+
+  </nav>
+
+  <section id="menu-lateral">
+    <h3>Menú</h3>
+    <ul id="lista-menu-lateral">
+      <li>
+        <a href="/inicio.html" class="links-menu-lateral">
+          <img src="./assets/img/casa.svg" alt="" class="iconos-menu-lateral">
+          Inicio
         </a>
-        <ul id="listaBarraNavegacion">
-            <li><a href="/inicio.html">Inicio</a></li>
-            <li><a href="/planes.html">Planes</a></li>
-            <li><a href="/glosario.html">Glosario</a></li>
-            <li><a href="/registro.html">Regístrate</a></li>
+      </li>
+      <li>
+        <a href="/planes.html" class="links-menu-lateral">
+          <img src="./assets/img/papel.svg" alt="" class="iconos-menu-lateral">
+          Planes
+        </a>
+      </li>
+      <li>
+        <a href="/glosario.html" class="links-menu-lateral">
+          <img src="./assets/img/listado.svg" alt="" class="iconos-menu-lateral">
+          Glosario
+        </a>
+      </li>
+      <li>
+        <a href="/ingreso.html" class="links-menu-lateral">
+          <img src="./assets/img/ingreso.svg" alt="" class="iconos-menu-lateral">
+          Ingresa
+        </a>
+      </li>
+      <li>
+        <a href="/registro.html" class="links-menu-lateral">
+          <img src="./assets/img/registro.svg" alt="" class="iconos-menu-lateral">
+          Regístrate
+        </a>
+      </li>
+    </ul>
+  </section>
+  <main>
+    <h2 id="titulo-planes">¿Por qué suscribirse a un plan?</h2>
+    <div class="motivos-suscripcion">
+      <p id="parrafo-necesidades">
+        Están diseñados para satisfacer las necesidades de todo tipo de
+        usuarios.
+      </p>
+      <img src="./assets/img/manos.svg" alt="" id="icono-manos">
+    </div>
+    <div class="motivos-suscripcion">
+      <img src="./assets/img/personas.svg" alt="" id="icono-personas">
+      <p id="parrafo-usuarios">
+        Podrás utilizar todas las funcionalidades que disponemos para ti.
+      </p>
+    </div>
+
+    <section id="planes-disponibles">
+      <h2 id="titulo-planes-disponibles">Planes disponibles</h2>
+      <article class="planes">
+        <span> 1 mes gratis</span>
+
+        <h3>Básico</h3>
+        <p>
+          Después del período de gratuidad, el precio mensual del plan asciende
+          a $2.500.
+        </p>
+
+        <ul>
+          <li>Consulta valores de los indicadores de hasta el último año.</li>
+          <li>Realiza hasta 10 consultas diarias.</li>
+          <li>
+            Las series temporales se restringen hasta un año en el tiempo.
+          </li>
         </ul>
-    </nav>
 
-    <section id="menuLateral">
-        <h3>Menú</h3>
-        <ol>
-            <li>
-                <a href="/inicio.html">
-                    <img src="./assets/img/casa.svg" alt="">
-                    Inicio
-                </a>
-            </li>
-            <li>
-                <a href="/planes.html">
-                    <img src="./assets/img/papel.svg" alt="">
-                    Planes
-                </a>
-            </li>
-            <li>
-                <a href="/glosario.html">
-                    <img src="./assets/img/listado.svg" alt="">
-                    Glosario
-                </a>
-            </li>
-            <li><a href="/ingreso.html"><img src="./assets/img/ingreso.svg" alt="">Ingresa</a></li>
-            <li>
-                <a href="/registro.html">
-                    <img src="./assets/img/registro.svg" alt="">
-                    Regístrate
-                </a>
-            </li>
-        </ol>
-    </section>
-<main>
-    <h2 id="tituloPlanes">¿Por qué suscribirse a un plan?</h2>
-    <div class="grupoParrafoPrimero">
-        <p id="parrafoPrimero">
-            Están diseñados para satisfacer las necesidades de todo tipo de
-            usuarios.
+        <button>Empezar</button>
+        <p>
+          Se aplican <strong>Términos y Condiciones</strong>. El mes gratis no
+          está disponible para aquellos usuarios que ya han probado alguno de
+          nuestros planes.
         </p>
-        <img src="./assets/img/manos.svg" alt=""  id="primerIcono">
-    </div>
-    <div class="grupoParrafoPrimero">
-        <img src="./assets/img/personas.svg" alt="" id="segundoIcono">
-        <p id="tiposUsuario">
-            Podrás utilizar todas las funcionalidades que disponemos para ti.
+      </article>
+
+      <article class="planes">
+        <span> 1 mes gratis</span>
+
+        <h3>Intermedio</h3>
+        <p>
+          Después del período de gratuidad, el precio mensual del plan asciende
+          a $3.500.
         </p>
-    </div>
 
-    <section id="planesDisponibles">
-        <h2>Planes disponibles</h2>
-        <article class="planes">
-            <span> 1 mes gratis</span>
+        <ul>
+          <li>Consulta valores de los indicadores sin límite temporal.</li>
+          <li>Realiza hasta 30 consultas diarias.</li>
+          <li>
+            Las series temporales se restringen hasta un año en el tiempo.
+          </li>
+        </ul>
 
-            <h3>Básico</h3>
-            <p>
-                Después del período de gratuidad, el precio mensual del plan asciende
-                a $2.500.
-            </p>
+        <button>Empezar</button>
+        <p>
+          Se aplican <strong>Términos y Condiciones</strong>. El mes gratis no
+          está disponible para aquellos usuarios que ya han probado alguno de
+          nuestros planes.
+        </p>
+      </article>
+      <article class="planes">
+        <span> 1 mes gratis</span>
 
-            <ul>
-                <li>Consulta valores de los indicadores de hasta el último año.</li>
-                <li>Realiza hasta 10 consultas diarias.</li>
-                <li>
-                    Las series temporales se restringen hasta un año en el tiempo.
-                </li>
-            </ul>
+        <h3>Avanzado</h3>
+        <p>
+          Después del período de gratuidad, el precio mensual del plan asciende
+          a $5.000.
+        </p>
 
-            <button>Empezar</button>
-            <p>
-                Se aplican <strong>Términos y Condiciones</strong>. El mes gratis no
-                está disponible para aquellos usuarios que ya han probado alguno de
-                nuestros planes.
-            </p>
-        </article>
-
-        <article class="planes">
-            <span> 1 mes gratis</span>
-
-            <h3>Intermedio</h3>
-            <p>
-                Después del período de gratuidad, el precio mensual del plan asciende
-                a $3.500.
-            </p>
-
-            <ul>
-                <li>Consulta valores de los indicadores sin límite temporal.</li>
-                <li>Realiza hasta 30 consultas diarias.</li>
-                <li>
-                    Las series temporales se restringen hasta un año en el tiempo.
-                </li>
-            </ul>
-
-            <button>Empezar</button>
-            <p>
-                Se aplican <strong>Términos y Condiciones</strong>. El mes gratis no
-                está disponible para aquellos usuarios que ya han probado alguno de
-                nuestros planes.
-            </p>
-        </article>
-        <article class="planes">
-            <span> 1 mes gratis</span>
-
-            <h3>Avanzado</h3>
-            <p>
-                Después del período de gratuidad, el precio mensual del plan asciende
-                a $5.000.
-            </p>
-
-            <ul>
-                <li>Consulta valores de los indicadores sin límite temporal.</li>
-                <li>Realiza consultas sin límites diarios.</li>
-                <li>Las series temporales no tienen restricción temporal.</li>
-            </ul>
-            <button>Empezar</button>
-            <p>
-                Se aplican <strong>Términos y Condiciones</strong>. El mes gratis no
-                está disponible para aquellos usuarios que ya han probado alguno de
-                nuestros planes.
-            </p>
-        </article>
+        <ul>
+          <li>Consulta valores de los indicadores sin límite temporal.</li>
+          <li>Realiza consultas sin límites diarios.</li>
+          <li>Las series temporales no tienen restricción temporal.</li>
+        </ul>
+        <button>Empezar</button>
+        <p>
+          Se aplican <strong>Términos y Condiciones</strong>. El mes gratis no
+          está disponible para aquellos usuarios que ya han probado alguno de
+          nuestros planes.
+        </p>
+      </article>
     </section>
-</main>
-    <script src="./assets/js/barraNavegacion.js" defer></script>
+    <footer id="footer">
+
+      <div id="contenedor-links">
+  
+        <div id="footer-links">
+          <ul id="footer-lista">
+            <li>
+              <a class="footer-link" href="./inicio.html">Inicio</a>
+            </li>
+            <li>
+              <a class="footer-link" href="./planes.html">Planes</a>
+            </li>
+            <li>
+              <a class="footer-link" href="./glosario.html">Glosario</a>
+            </li>
+            <li>
+              <a class="footer-link" href="./ingreso.html">Ingresa</a>
+            </li>
+            <li>
+              <a class="footer-link" href="./registro.html">Regístrate</a>
+            </li>
+          </ul>
+        </div>
+  
+        <p id="footer-parrafo">Indice Diario &copy; 2023</p>
+      </div>
+  
+    </footer>
+
+  </main>
+
+ 
+
+  <script src="./assets/js/barraNavegacion.js" defer></script>
 </body>
 
 </html>
