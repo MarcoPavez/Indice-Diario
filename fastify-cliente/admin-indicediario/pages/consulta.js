@@ -1,16 +1,14 @@
-import BarraNavegacion from "@/components/barraNavegacion";
-import ListaConsultas from "@/components/listaConsultas";
-import PanelConsultas from "@/components/panelConsultas";
-import PiePagina from "@/components/piePagina";
-
+import ListaConsultas from "@/components/consultas/listaConsultas";
+import PanelConsultas from "@/components/consultas/panelConsultas";
+import Layout from "@/components/layout";
 
 export default function PaginaConsulta() {
     return (
-        <>
-            <BarraNavegacion />
+        <Layout>
+     
             <PanelConsultas />
             <ListaConsultas />
-            <PiePagina />
-        </>
+ 
+        </Layout>
     )
 }
