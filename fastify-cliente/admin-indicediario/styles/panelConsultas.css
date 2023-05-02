@@ -1,0 +1,64 @@
+.parrafos-informativos {
+    box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 1vw;
+  
+    padding: 2vw;
+    margin-inline: 4.5vw;
+    margin-block: 4vw;
+  
+    font-size: 2.6vw;
+    font-weight: 300;
+  
+    text-align: justify;
+  }
+
+.titulos-de-consultas {
+    font-size: 4vw;
+    font-weight: 800;
+    text-align: center;
+    margin-block: 5vw;
+  }
+  
+  #panel-botones {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  #indices-nacionales,
+  #indices-internacionales,
+  #consultar-indice {
+    background-color: var(--colorTriadicoPrimero);
+    width: 30vw;
+    box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.15);
+    padding: 1vw;
+    border-style: none;
+    border-radius: 3vw;
+    color: white;
+    font-size: 2.5vw;
+    font-weight: 500;
+  }
+  
+  #botones-nacionales,
+  #botones-internacionales {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+    grid-gap: 1vw;
+    margin-inline: 5vw;
+    margin-block: 3vw;
+  }
+  
+  .boton-indice {
+    height: 8vw;
+    margin-top: 2vw;
+    box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.15);
+    border-style: none;
+    border-radius: 3vw;
+    font-size: 2vw;
+    font-weight: 300;
+  }
+  
+  #despliegue-respuesta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
