@@ -21,7 +21,24 @@ export default function ListaConsultas() {
 
     useEffect(() => {
         cargarDatos();
-    }, [])
+    }, []);
+
+    const eliminarDato = async (consulta) => {
+        try {
+            const baseURL = 'http://localhost:3000';
+            const url = baseURL + '/registro-consultas?id='+consulta.id;
+
+            const respuesta = await fetch (url, {
+                method: 'DELETE'
+            });
+            if( !respuesta.ok) throw new Error ("No se pudo borrar la consulta");
+            const resultado = await respuesta.json();
+            console.log("Categoría borrada de manera exitosa");
+            cargarDatos();
+        } catch ( error ) {
+            console.error({error: error.message})
+        }
+    };
 
     return (
         <>
@@ -41,7 +58,10 @@ export default function ListaConsultas() {
                             <td>{consulta.id}</td>
                             <td>{consulta.nombreIndicador}</td>
                             <td>{consulta.fechaConsultada}</td>
-                            <td></td>
+                            <td>
+                                <button>Editar</button>
+                                <button onClick={ () => eliminarDato(consulta)}>Eliminar</button>
+                            </td>
                         </tr>
                     ))}
                 </tbody>
