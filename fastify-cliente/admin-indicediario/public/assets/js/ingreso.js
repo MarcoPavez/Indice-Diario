@@ -32,7 +32,6 @@ formulario.addEventListener("submit", async (submitEvent) => {
         }
 
         const objetoJSON = await respuesta.json();
-        console.dir(objetoJSON);
         
         const usuarioLogin = objetoJSON.user;
         localStorage.setItem('usuario', JSON.stringify(usuarioLogin));

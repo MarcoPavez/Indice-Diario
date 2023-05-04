@@ -16,7 +16,7 @@ export default function ListaConsultas({consultas, setConsultas}) {
             console.error( error )
         }
     }
-
+ 
     useEffect(() => {
         cargarDatos();
     }, []);
@@ -44,7 +44,6 @@ export default function ListaConsultas({consultas, setConsultas}) {
             <table border={1}>
                 <thead>
                     <tr>
-                        <th>ID</th>
                         <th>Indicador consultado</th>
                         <th>Fecha consultada</th>
                         <th>Acciones</th>
@@ -53,11 +52,10 @@ export default function ListaConsultas({consultas, setConsultas}) {
                 <tbody>
                     {consultas.map(consulta => (
                         <tr key={consulta.id}>
-                            <td>{consulta.id}</td>
                             <td>{consulta.nombreIndicador}</td>
                             <td>{consulta.fechaConsultada}</td>
                             <td>
-                                <button>Editar</button>
+                   
                                 <button onClick={ () => eliminarDato(consulta)}>Eliminar</button>
                             </td>
                         </tr>

@@ -5,7 +5,8 @@ const formApellido = document.getElementById("apellido");
 const formCorreo = document.getElementById("correo");
 const formContrasena = document.getElementById("contrasena");
 const formRepetirContrasena = document.getElementById("confirmar-contrasena");
-const formGenero = document.getElementsByClassName("genero");
+const formGenero = document.querySelectorAll('#genero input[type="radio"]');
+console.log(formGenero)
 const formNacimiento = document.getElementById("fecha-nacimiento");
 const formPais = document.getElementById("seleccionar-pais");
 const formTerminosCondiciones = document.getElementById("boton-submit-registro");
@@ -159,6 +160,7 @@ const validaRepetirContrasena = () => {
     }
 }
 
+
 formRepetirContrasena.addEventListener("focusout", () => {
     validaRepetirContrasena();
 })
@@ -185,13 +187,19 @@ const validaGenero = () => {
     }
 }
 
+formGenero.forEach(botonRadio => {
+    botonRadio.addEventListener("focusout", () => {
+        validaGenero();
+    })
+})
+
 /* Validación nacimiento */
 formNacimiento.value = "";
 const validaNacimiento = () => {
-    
+    const fechaNacimiento = new Date(document.getElementById("fecha-nacimiento").value);
     let seleccionNacimiento = false;
 
-    if (formNacimiento.value !== "") {
+    if (isNaN(fechaNacimiento.getTime())) {
         seleccionNacimiento = true;
     }
 
@@ -207,7 +215,7 @@ const validaNacimiento = () => {
     }
 
     //¿Usuario mayor de 14 años?
-    const fechaNacimiento = new Date(document.getElementById("fecha-nacimiento").value);
+    
     const hoy = new Date();
     const edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
     fechaNacimiento.setFullYear(hoy.getFullYear());
@@ -229,7 +237,7 @@ const validaNacimiento = () => {
 
 formNacimiento.addEventListener("focusout", () => {
     validaNacimiento();
-})
+}) 
 
 
 /* Validación país */
@@ -251,6 +259,8 @@ formPais.addEventListener("focusout", () => {
     validarPais();
 })
 
+console.log(formNombre.value)
+
 /* METODO POST PARA REGISTRO USUARIO */
 const formulario = document.querySelector("form");
 
@@ -271,8 +281,8 @@ formulario.addEventListener("submit", async (submitEvent) => {
     validaNacimiento();
     validarPais();
 
-
-    if (Object.values(validacionesExitosas).includes(false)) {    
+    /* Registro usuario */
+    if (Object.values(validacionesExitosas).includes(false)) {
         mensajeErrorForm.innerText = "Antes de registrarte, debes validar los datos ingresados.";
     } else {
         mensajeErrorForm.remove();
@@ -312,5 +322,54 @@ formulario.addEventListener("submit", async (submitEvent) => {
             console.error(error.code);
             console.error(error.message);
         }
+
+        /* Guardar información adicional usuario */
+
+        const nombre = formData.get("nombre");
+        console.log(nombre)
+        const apellido = formData.get("apellido");
+        const nombreUsuario = formData.get("nombre-usuario");
+        const genero = formData.get("genero");
+        const fechaNacimiento = formData.get("fecha-nacimiento");
+        const paisResidencia = formData.get("seleccionar-pais");
+
+        const infoUsuario = {
+            nombre,
+            apellido,
+            nombreUsuario,
+            correo,
+            genero,
+            fechaNacimiento,
+            paisResidencia,
+        }
+
+        console.log(infoUsuario)
+
+        const baseUrlInfoUsuario = "http://localhost:3000";
+        const urlInfoUsuario = baseUrlInfoUsuario + "/infoUsuarioAdicional";
+        const fetchConfigInfoUsuario = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(infoUsuario),
+        };
+
+        try {
+            const respuestaInfoUsuario = await fetch(urlInfoUsuario, fetchConfigInfoUsuario);
+            // TODO gestionar errores
+            if (!respuestaInfoUsuario.ok) {
+                console.error("La respuesta no está OK");
+                return;
+            }
+
+            const objetoJSONInfoUsuario = await respuestaInfoUsuario.json();
+            console.dir(objetoJSONInfoUsuario);
+        } catch (error) {
+            //gestionar errores
+            console.error(error.code);
+            console.error(error.message);
+        }
+
     }
 });
