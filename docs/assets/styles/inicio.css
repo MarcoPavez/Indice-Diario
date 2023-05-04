@@ -1,0 +1,242 @@
+/* Atributos de estructura */
+#informacion-introductoria {
+  padding-bottom: 1vw;
+  /* Debido a navbar position:fixed, es necesario darle margin-top a #inicioSuperior */
+  margin-top: 7vw;
+  padding-top: 2vw;
+}
+
+.titulos-incentivo {
+  margin: 0;
+  margin-block: 6vw;
+}
+
+.parrafos-informativos {
+  padding: 2vw;
+  margin-inline: 4.5vw;
+  margin-block: 5vw;
+}
+
+#informacion-introductoria-iconos p {
+  width: 50%;
+}
+
+picture {
+  width: 50%;
+}
+
+picture img {
+  width: 45%;
+}
+
+#panel-botones {
+  display: flex;
+  justify-content: space-evenly;
+  margin-block: 4vw;
+}
+
+.titulos-de-consultas {
+  margin-block: 6vw;
+}
+
+#indices-nacionales,
+#indices-internacionales,
+#consultar-indice {
+  width: 30vw;
+  padding: 1vw;
+}
+
+
+#botones-nacionales,
+#botones-internacionales {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+  grid-gap: 1vw;
+  margin-inline: 5vw;
+  margin-block: 3vw;
+}
+
+.boton-indice {
+  height: 8vw;
+  margin-top: 2vw;
+}
+
+#despliegue-respuesta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#consultar-indice {
+  margin-block: 5vw;
+}
+
+/* Atributos de estilo */
+
+#informacion-introductoria {
+  background-color: #e2e4ea;
+  box-shadow: 0 0px 10px 2px #b7bccd;
+}
+
+.titulos-incentivo {
+  color: var(--colorPrincipal);
+  font-size: 4.5vw;
+  text-align: center;
+}
+
+.parrafos-informativos {
+  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 1vw;
+  font-size: 2.6vw;
+  font-weight: 300;
+  text-align: justify;
+}
+
+#informacion-introductoria-iconos {
+  display: flex;
+}
+
+.div-pantallas-grandes>.parrafos-informativos {
+  text-align: center;
+}
+
+strong {
+  color: var(--colorTriadicoPrimero);
+  font-weight: 600;
+}
+
+.titulos-de-consultas {
+  font-size: 4vw;
+  font-weight: 800;
+  text-align: center;
+}
+
+#indices-nacionales,
+#indices-internacionales,
+#consultar-indice {
+  background-color: var(--colorTriadicoPrimero);
+  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.15);
+  border-style: none;
+  border-radius: 3vw;
+  color: white;
+  font-size: 2.5vw;
+  font-weight: 500;
+}
+
+.boton-indice {
+  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.15);
+  border-style: none;
+  border-radius: 3vw;
+  font-size: 2vw;
+  font-weight: 300;
+}
+
+
+
+@media (max-width: 380px) {
+  #panel-botones {
+    font-size: 3vw;
+    font-weight: 400;
+  }
+
+  .boton-indice {
+    height: 17vw;
+    margin-top: 0.5vw;
+    font-size: 2.5vw;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .panel-botones {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+
+  .boton-indice {
+    height: 8vw;
+    margin-top: 2vw;
+    font-size: 1.8vw;
+  }
+}
+
+@media (min-width: 769px) and (max-width:1200px) {
+  #informacion-introductoria h2 {
+    margin-top: 5vw;
+    padding-bottom: 0;
+  }
+
+  #panel-botones {
+    margin-bottom: 2vw;
+  }
+
+  .boton-indice {
+    font-size: 2vw;
+    height: 8vw;
+  }
+}
+
+@media (min-width: 1201px) {
+
+  #informacion-introductoria {
+    margin-top: 1vw;
+  }
+
+  .titulos-incentivo {
+    margin-block: 4vw;
+    font-size: 2.75vw;
+  }
+
+  .parrafos-informativos {
+    padding: 1.5vw;
+    font-size: 1.5vw;
+    margin-block: 2vw;
+    height: 5vw;
+  }
+
+  .div-pantallas-grandes>.parrafos-informativos {
+    padding-top: 2.5vw;
+  }
+
+  .div-pantallas-grandes {
+    margin-inline: 5vw;
+  }
+
+  .titulos-de-consultas {
+    font-size: 2.25vw;
+    margin-block: 3vw;
+  }
+
+  #panel-botones {
+    margin-block: 2vw;
+  }
+
+  #indices-nacionales,
+  #indices-internacionales {
+    font-size: 1.5vw;
+    width: 25%;
+    height: 4vw;
+  }
+
+  #botones-nacionales,
+  #botones-internacionales {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19vw, 1fr));
+    grid-gap: 1vw;
+    margin-inline: 5vw;
+    margin-block: 3vw;
+  }
+
+  .boton-indice {
+    font-size: 1.2vw;
+    height: 3.5vw;
+    width: 17.5vw;
+  }
+
+  #consultar-indice{
+    font-size: 1.5vw;
+    width: 25%;
+    margin-block: 2vw;
+    height: 4vw;
+  }
+}

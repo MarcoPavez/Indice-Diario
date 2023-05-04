@@ -1,0 +1,154 @@
+/* Atributos de estructura */
+main{
+  padding-inline: 2vw;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5vw;
+  margin-top: 10vw;
+  padding: 1vw;
+}
+
+h2 {
+  margin: 0;
+  margin-top: 5vw;
+  margin-bottom: 3vw;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 2vw;
+}
+
+label {
+  margin-bottom: 1vw;
+}
+ 
+.inputs-escritos {
+  margin-bottom: 2vw;
+  padding: 1vw;
+}
+
+#genero {
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedor-opciones-genero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  gap: 1vw;
+  margin-bottom: 2vw;
+  width: 75%;
+}
+
+.opcion-genero {
+  height: 2.5vw;
+  width: 2.5vw;
+  margin: 0;
+}
+
+#nacimiento-pais {
+  display: flex;
+  gap: 10vw;
+}
+
+#seleccionar-pais,
+#fecha-nacimiento {
+  margin-bottom: 2vw;
+  padding: 1vw;
+  width: 35vw;
+}
+
+#input-terminos-condiciones {
+  height: 2.5vw;
+  width: 2.5vw;
+}
+
+#boton-submit-registro {
+  padding: 1vw;
+  width: 50%;
+}
+
+span {
+  display: block;
+}
+
+/* Atributos de estilo */
+
+.inputs-escritos {
+  font-size: 2.2vw;
+  border-color: black;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+legend {
+  font-size: 3.5vw;
+}
+
+label {
+  font-size: 3vw;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 5vw;
+  text-align: center;
+}
+
+#seleccionar-pais,
+#fecha-nacimiento {
+  border-color: black;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 2.5vw;
+}
+
+#label-terminos-condiciones {
+  font-size: 2.5vw;
+  text-align: center;
+}
+
+#input-terminos-condiciones {
+  cursor: pointer;
+}
+
+#boton-submit-registro {
+  background-color: var(--colorPrincipal);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 4vw;
+}
+
+p {
+  font-size: 3vw;
+  text-align: center;
+}
+
+span {
+  font-size: 2.25vw;
+  font-weight: 500;
+  text-align: center;
+}
+
+@media (max-width: 390px) {
+  form {
+    gap: 20px;
+    padding: 1vw;
+    margin-top: 15vw;
+  }
+
+}
