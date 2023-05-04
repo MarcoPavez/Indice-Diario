@@ -12,10 +12,9 @@ export default function Perfil() {
 
     return (
         <Layout>
-            <h1>PERFIL</h1>
             <section>
                 <ul>
-                    <li>Información del perfil</li>
+                    <li>Perfil</li>
                     <li>Realizar consultas</li>
                     <li>Registro de consultas</li>
                     <li>Configuración</li>

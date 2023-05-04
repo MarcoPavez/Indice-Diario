@@ -20,7 +20,6 @@ export default function InfoUsuarioAdicional() {
                     setDatosUsuario(respuesta);
                 }
             })
-
         } catch (error) {
             console.error(error)
         }
@@ -30,10 +29,7 @@ export default function InfoUsuarioAdicional() {
         cargarDatos();
     }, []);
 
-
-
     return (
-
         <>
             <h2>Bienvenido {datosUsuario.nombre} {datosUsuario.apellido}</h2>
 
@@ -76,8 +72,6 @@ export default function InfoUsuarioAdicional() {
                     </tr>
                 </tbody>
             </table>
-
         </>
-
     )
 }

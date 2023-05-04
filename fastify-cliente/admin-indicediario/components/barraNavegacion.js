@@ -29,7 +29,7 @@ export default function BarraNavegacion() {
         if (usuario) {
             setUsuarioIngresado(true);
         }
-    })
+    }, [])
 
     return (
         <>
