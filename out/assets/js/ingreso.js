@@ -13,7 +13,7 @@ formulario.addEventListener("submit", async (submitEvent) => {
         contrasena
     }
 
-    const baseURL = "http://localhost:3000";
+    const baseURL = "https://placid-seen-raven.glitch.me";
     const url = baseURL + "/ingreso"
     const fetchConfig = {
         method: "POST",
@@ -35,7 +35,7 @@ formulario.addEventListener("submit", async (submitEvent) => {
         
         const usuarioLogin = objetoJSON.user;
         localStorage.setItem('usuario', JSON.stringify(usuarioLogin));
-        window.location = 'http://localhost:8080/perfil';
+        window.location = '/perfil';
     } catch (error) {
         //gestionar errores
         console.error(error.code);

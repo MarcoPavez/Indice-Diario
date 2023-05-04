@@ -297,7 +297,7 @@ formulario.addEventListener("submit", async (submitEvent) => {
             contrasena,
         };
 
-        const baseURL = "http://localhost:3000";
+        const baseURL = "https://placid-seen-raven.glitch.me";
         const url = baseURL + "/registro";
         const fetchConfig = {
             method: "POST",
@@ -345,7 +345,7 @@ formulario.addEventListener("submit", async (submitEvent) => {
 
         console.log(infoUsuario)
 
-        const baseUrlInfoUsuario = "http://localhost:3000";
+        const baseUrlInfoUsuario = "https://placid-seen-raven.glitch.me";
         const urlInfoUsuario = baseUrlInfoUsuario + "/infoUsuarioAdicional";
         const fetchConfigInfoUsuario = {
             method: "POST",

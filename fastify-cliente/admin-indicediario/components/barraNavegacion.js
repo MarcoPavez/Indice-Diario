@@ -1,10 +1,43 @@
 import { useState, useEffect, useRef } from 'react';
-import { handleCerrarSesion } from '@/cerrarSesion';
 
 export default function BarraNavegacion() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const menuRef = useRef(null);
     const [usuarioIngresado, setUsuarioIngresado] = useState(false);
+
+    const verificarUsuario = async () => {
+    
+        const usuarioLocal = localStorage.getItem("usuario");
+        if (usuarioLocal == null) {
+            window.location = "inicio.html";
+        }
+        const objetoUsuario = JSON.parse(usuarioLocal);
+        const token = objetoUsuario.stsTokenManager.accessToken;
+    
+        const baseURL = "https://placid-seen-raven.glitch.me";
+        const url = baseURL + "/usuario/verificarToken";
+      
+        try {
+          const respuesta = await fetch(url, {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+              "Authorization": "Bearer " + token,
+            },
+          });
+      
+          if (!respuesta.ok) {
+            throw new Error("Token inválido");
+          }
+    
+          const data = await respuesta.json();
+          return data;
+        } catch (error) {
+          console.log(error.message);
+          window.location = "ingreso.html";
+          throw new Error("Error al verificar usuario");
+        }
+      };
 
     const toggleMenu = () => {
         setIsMenuOpen(true);
@@ -13,7 +46,6 @@ export default function BarraNavegacion() {
     useEffect(() => {
         const handleClickOutsideMenu = (event) => {
             if (menuRef.current && !menuRef.current.contains(event.target)) {
-            
                     setIsMenuOpen(false);        
             }
         };
@@ -30,6 +62,18 @@ export default function BarraNavegacion() {
             setUsuarioIngresado(true);
         }
     }, [])
+
+    const handleCerrarSesion = () => {
+        localStorage.removeItem('usuario');
+        const usuarioLocal = localStorage.getItem("usuario");
+        if (usuarioLocal == null) {
+            window.location = "/inicio.html";
+        } else {
+            window.location = "/perfil"
+        }
+    
+        verificarUsuario();
+    }
 
     return (
         <>

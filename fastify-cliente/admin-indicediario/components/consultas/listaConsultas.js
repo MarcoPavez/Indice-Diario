@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 
 export default function ListaConsultas({consultas, setConsultas}) {
 
     const cargarDatos = async () => {
         try {
-            const baseURL = 'http://localhost:3000';
+            const baseURL = 'https://placid-seen-raven.glitch.me';
             const url = baseURL + '/registro-consultas';
         
             const respuesta = await fetch(url);
@@ -23,7 +23,7 @@ export default function ListaConsultas({consultas, setConsultas}) {
 
     const eliminarDato = async (consulta) => {
         try {
-            const baseURL = 'http://localhost:3000';
+            const baseURL = 'https://placid-seen-raven.glitch.me';
             const url = baseURL + '/registro-consultas?id='+consulta.id;
 
             const respuesta = await fetch (url, {

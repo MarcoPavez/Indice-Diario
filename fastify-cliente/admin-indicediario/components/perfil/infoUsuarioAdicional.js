@@ -6,7 +6,7 @@ export default function InfoUsuarioAdicional() {
 
     const cargarDatos = async () => {
         try {
-            const baseURL = 'http://localhost:3000';
+            const baseURL = 'https://placid-seen-raven.glitch.me';
             const url = baseURL + '/infoUsuarioAdicional';
             const respuestaFetch = await fetch(url);
             if (!respuestaFetch.ok) throw new Error("Problema al recuperar las categorías")

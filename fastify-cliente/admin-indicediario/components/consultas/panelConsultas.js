@@ -16,7 +16,7 @@ export default function PanelConsultas({ consultas, setConsultas }) {
                 fechaConsultada
             };
 
-            const baseURL = 'http://localhost:3000';
+            const baseURL = 'https://placid-seen-raven.glitch.me';
             const url = baseURL + '/registro-consultas'
 
             const respuesta = await fetch(url, {

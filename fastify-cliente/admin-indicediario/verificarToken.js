@@ -1,4 +1,4 @@
-export const verificarUsuario = async () => {
+/* export const verificarUsuario = async () => {
     
     const usuarioLocal = localStorage.getItem("usuario");
     if (usuarioLocal == null) {
@@ -7,7 +7,7 @@ export const verificarUsuario = async () => {
     const objetoUsuario = JSON.parse(usuarioLocal);
     const token = objetoUsuario.stsTokenManager.accessToken;
 
-    const baseURL = "http://localhost:3000";
+    const baseURL = "https://placid-seen-raven.glitch.me";
     const url = baseURL + "/usuario/verificarToken";
   
     try {
@@ -30,4 +30,4 @@ export const verificarUsuario = async () => {
       window.location = "ingreso.html";
       throw new Error("Error al verificar usuario");
     }
-  };
+  }; */
