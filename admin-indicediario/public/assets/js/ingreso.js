@@ -35,7 +35,7 @@ formulario.addEventListener("submit", async (submitEvent) => {
         
         const usuarioLogin = objetoJSON.user;
         localStorage.setItem('usuario', JSON.stringify(usuarioLogin));
-        window.location = '/perfil';
+        window.location = '/Indice-Diario-Cliente/perfil';
     } catch (error) {
         //gestionar errores
         console.error(error.code);
