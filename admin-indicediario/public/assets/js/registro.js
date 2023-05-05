@@ -70,7 +70,7 @@ const validaCorreo = () => {
     // Expresión regular: estructura básica de un correo (aaa@bbb.ccc)
     const regexCorreoEstructura = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     // Expresión regular: símbolos no permitidos en correo
-    const regexCorreoCaracteres = "/[(),:;<>[\]\\\!\#\$\%\&\'\*\+\/\=\?\^\`\{\|\}\~]/";
+    const regexCorreoCaracteres = /[(),:;<>[\]\\\!\#\$\%\&\'\*\+\/\=\?\^\`\{\|\}\~]/;
 
     if (!regexCorreoEstructura.test(valorCorreo)) {
         mensajeErrorCorreo.innerText = "La estructura del correo no es válida. Esta debe ser, por ejemplo, minombre@dominio.com";
