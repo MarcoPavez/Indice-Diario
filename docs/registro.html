@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/registro.css">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/barraNavegacion.css">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/estiloGeneral.css">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/piePagina.css">
+    <title>Indice Diario</title>
+</head>
+
+<body>
+
+    <nav>
+
+        <picture id="contenedor-icono-barras">
+            <img src="./assets/img/barras.svg" alt="" id="icono-barras">
+        </picture>
+        <a href="/Indice-Diario-Cliente/inicio.html">
+            <h1 id="titulo-principal">Índice Diario</h1>
+        </a>
+        <ul id="lista-barra-navegacion">
+            <li><a href="/Indice-Diario-Cliente/inicio.html">Inicio</a></li>
+            <li><a href="/Indice-Diario-Cliente/planes.html">Planes</a></li>
+            <li><a href="/Indice-Diario-Cliente/glosario.html">Glosario</a></li>
+            <li><a href="/Indice-Diario-Cliente/registro.html">Regístrate</a></li>
+        </ul>
+
+    </nav>
+
+    <section id="menu-lateral">
+        <h3>Menú</h3>
+        <ul id="lista-menu-lateral">
+            <li>
+                <a href="/Indice-Diario-Cliente/inicio.html" class="links-menu-lateral">
+                    <img src="./assets/img/casa.svg" alt="" class="iconos-menu-lateral">
+                    Inicio
+                </a>
+            </li>
+            <li>
+                <a href="/Indice-Diario-Cliente/planes.html" class="links-menu-lateral">
+                    <img src="./assets/img/papel.svg" alt="" class="iconos-menu-lateral">
+                    Planes
+                </a>
+            </li>
+            <li>
+                <a href="/Indice-Diario-Cliente/glosario.html" class="links-menu-lateral">
+                    <img src="./assets/img/listado.svg" alt="" class="iconos-menu-lateral">
+                    Glosario
+                </a>
+            </li>
+            <li>
+                <a href="/Indice-Diario-Cliente/ingreso.html" class="links-menu-lateral">
+                    <img src="./assets/img/ingreso.svg" alt="" class="iconos-menu-lateral">
+                    Ingresa
+                </a>
+            </li>
+            <li>
+                <a href="/Indice-Diario-Cliente/registro.html" class="links-menu-lateral">
+                    <img src="./assets/img/registro.svg" alt="" class="iconos-menu-lateral">
+                    Regístrate
+                </a>
+            </li>
+        </ul>
+    </section>
+    <main>
+        <form>
+            <h2>Regístrate</h2>
+
+            <fieldset id="perfil">
+                <legend>Perfil</legend>
+
+                <label for="nombre">Ingresa tu nombre</label>
+                <input type="text" name="nombre" id="nombre" class="inputs-escritos" placeholder="Ej: Pablo">
+
+                <label for="apellido">Ingresa tu apellido</label>
+                <input type="text" name="apellido" id="apellido" class="inputs-escritos" placeholder="Ej: Martínez">
+
+                <label for="nombre-usuario">Ingresa tu nombre de usuario (opcional)</label>
+                <input type="text" name="nombre-usuario" id="nombre-usuario" class="inputs-escritos"
+                    placeholder="Ej: PMartinez">
+            </fieldset>
+
+            <fieldset id="contacto-seguridad">
+                <legend>Contacto y seguridad</legend>
+
+                <label for="correo">Correo electrónico</label>
+                <input type="email" name="correo" id="correo" class="inputs-escritos"
+                    placeholder="Ej: pablomart@gmail.com">
+
+                <label for="contrasena">Contraseña</label>
+                <input type="password" name="contrasena" id="contrasena" class="inputs-escritos">
+
+                <label for="confirmar-contrasena">Confirmar contraseña</label>
+                <input type="password" name="confirmar-contrasena" id="confirmar-contrasena" class="inputs-escritos">
+            </fieldset>
+
+            <fieldset>
+                <legend>Datos complementarios</legend>
+
+                <div id="genero">
+                    <label for="genero">Género</label>
+                    <div class="contenedor-opciones-genero">
+                        <label for="masculino">Masculino</label>
+                        <input type="radio" name="genero" id="masculino" class="opcion-genero" value="masculino">
+                    </div>
+
+                    <div class="contenedor-opciones-genero">
+                        <label for="femenino">Femenino</label>
+                        <input type="radio" name="genero" id="femenino" class="opcion-genero" value="femenino">
+                    </div>
+
+                    <div class="contenedor-opciones-genero">
+                        <label for="otro">Otro</label>
+                        <input type="radio" name="genero" id="otro" class="opcion-genero" value="otro">
+                    </div>
+                </div>
+
+                <div id="nacimiento-pais">
+                    <div>
+                        <label for="fecha-nacimiento">Fecha de nacimiento</label>
+                        <input type="date" name="fecha-nacimiento" id="fecha-nacimiento">
+                    </div>
+                    <div>
+                        <label for="seleccionar-pais">País de residencia</label>
+                        <select name="pais" id="seleccionar-pais">
+                            <option value="">Selecciona una opción</option>
+                            <option value="chile">Chile</option>
+                            <option value="argentina">Argentina</option>
+                            <option value="peru">Perú</option>
+                            <option value="venezuela">Venezuela</option>
+                            <option value="brasil">Brasil</option>
+                            <option value="colombia">Colombia</option>
+                            <option value="uruguay">Uruguay</option>
+                            <option value="ecuador">Ecuador</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+
+            <label id="label-terminos-condiciones">
+                <input type="checkbox" name="input-terminos-condiciones" id="input-terminos-condiciones"
+                    value="acepta"><br>
+
+                <label>Acepto los Términos y Condiciones</label><br><br>
+
+                <input type="submit" id="boton-submit-registro" value="Regístrate">
+            </label>
+
+        </form>
+
+        <p>
+            ¿Ya tienes una cuenta?
+            <a href="/Indice-Diario-Cliente/ingreso.html">Ingresa</a>
+        </p>
+    </main>
+        <footer id="footer">
+
+            <div id="contenedor-links">
+        
+              <div id="footer-links">
+                <ul id="footer-lista">
+                  <li>
+                    <a class="footer-link" href="/Indice-Diario-Cliente/inicio.html">Inicio</a>
+                  </li>
+                  <li>
+                    <a class="footer-link" href="/Indice-Diario-Cliente/planes.html">Planes</a>
+                  </li>
+                  <li>
+                    <a class="footer-link" href="/Indice-Diario-Cliente/glosario.html">Glosario</a>
+                  </li>
+                  <li>
+                    <a class="footer-link" href="/Indice-Diario-Cliente/ingreso.html">Ingresa</a>
+                  </li>
+                  <li>
+                    <a class="footer-link" href="/Indice-Diario-Cliente/registro.html">Regístrate</a>
+                  </li>
+                </ul>
+              </div>
+        
+              <p id="footer-parrafo">Indice Diario &copy; 2023</p>
+            </div>
+        
+          </footer>
+    
+
+    <script src="./assets/js/registro.js" defer> </script>
+    <script src="./assets/js/barraNavegacion.js" defer></script>
+</body>
+
+</html>
