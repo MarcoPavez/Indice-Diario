@@ -10,7 +10,7 @@ export default function Perfil() {
         if (usuarioLocal == null) {
             window.location = "/inicio.html";
         } else {
-            window.location = "/perfil"
+            window.location = "./perfil"
         }
     
         verificarUsuario();
