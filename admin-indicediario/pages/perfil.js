@@ -8,9 +8,9 @@ export default function Perfil() {
         localStorage.removeItem('usuario');
         const usuarioLocal = localStorage.getItem("usuario");
         if (usuarioLocal == null) {
-            window.location = "/inicio.html";
+            window.location = "/Indice-Diario-Cliente/inicio.html";
         } else {
-            window.location = "./perfil"
+            window.location = "/perfil"
         }
     
         verificarUsuario();
@@ -20,7 +20,7 @@ export default function Perfil() {
     
         const usuarioLocal = localStorage.getItem("usuario");
         if (usuarioLocal == null) {
-            window.location = "inicio.html";
+            window.location = "/Indice-Diario-Cliente/inicio.html";
         }
         const objetoUsuario = JSON.parse(usuarioLocal);
         const token = objetoUsuario.stsTokenManager.accessToken;
@@ -45,7 +45,7 @@ export default function Perfil() {
           return data;
         } catch (error) {
           console.log(error.message);
-          window.location = "ingreso.html";
+          window.location = "/Indice-Diario-Cliente/inicio.html";
           throw new Error("Error al verificar usuario");
         }
       };
