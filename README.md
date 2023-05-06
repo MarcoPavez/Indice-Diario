@@ -42,8 +42,8 @@ Disponible en:
 [Ingreso zona privada](https://marcopavez.github.io/Indice-Diario-Cliente/ingreso.html)
 
 Las credenciales de ingreso son: 
-**Correo electrónico:** pruebademo@gmail.com
-**Contraseña:** Pruebademo1.
+- **Correo electrónico:** pruebademo@gmail.com
+- **Contraseña:** Pruebademo1.
 
 ## Referencias API
 
