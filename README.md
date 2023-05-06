@@ -27,6 +27,19 @@ Los indicadores disponibles para su consulta, según el sitio web www.mindicador
 
 La guía de estilos y los distintos bosquejos están disponibles en [Figma Índice Diario](https://www.figma.com/file/sWJNi9pD6EHVHBTAbjNBsH/Gu%C3%ADa-de-estilos-y-mockups-%C3%8Dndice-Diario?node-id=0%3A1&t=9pHTQsqutB3gbbyh-1)
 
+## Demo
+
+### Zona pública
+
+
+
+### Zona privada
+
+
+Las credenciales de ingreso son: 
+**Correo electrónico:** pruebademo@gmail.com
+**Contraseña:** Pruebademo1.
+
 ## Créditos 
 
 @lee_om (en Twitter), desarrollador del sitio web www.mindicador.cl

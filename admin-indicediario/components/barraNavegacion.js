@@ -1,61 +1,31 @@
+import handleCerrarSesion from '@/cerrarSesion';
 import { useState, useEffect, useRef } from 'react';
 
 export default function BarraNavegacion() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [menuAbierto, setMenuAbierto] = useState(false);
     const menuRef = useRef(null);
     const [usuarioIngresado, setUsuarioIngresado] = useState(false);
 
-    const verificarUsuario = async () => {
-
-        const usuarioLocal = localStorage.getItem("usuario");
-        if (usuarioLocal == null) {
-            window.location = "inicio.html";
-        }
-        const objetoUsuario = JSON.parse(usuarioLocal);
-        const token = objetoUsuario.stsTokenManager.accessToken;
-
-        const baseURL = "https://placid-seen-raven.glitch.me";
-        const url = baseURL + "/usuario/verificarToken";
-
-        try {
-            const respuesta = await fetch(url, {
-                method: "GET",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": "Bearer " + token,
-                },
-            });
-
-            if (!respuesta.ok) {
-                throw new Error("Token inválido");
-            }
-
-            const data = await respuesta.json();
-            return data;
-        } catch (error) {
-            console.log(error.message);
-            window.location = "ingreso.html";
-            throw new Error("Error al verificar usuario");
-        }
+    /* Menu lateral se renderiza al hacer click en contenedor-icono-barras: menuAbierto=true */
+    const abrirMenu = () => {
+        setMenuAbierto(true);
     };
 
-    const toggleMenu = () => {
-        setIsMenuOpen(true);
-    };
+    /* Cerrar menú - condiciones:
+    1- menuAbierto = true;
+    2.1- al presionar click en objeto document del HTML DOM (página), el valor actual de la referencia es <section id="menu-lateral> (significa que menu-lateral se está renderizando o, lo que es lo mismo, menuAbierto=true)
+    2.2- que la referencia (menu-lateral) no contenga el evento (presionar click fuera de menu-lateral)*/
 
     useEffect(() => {
-        const handleClickOutsideMenu = (event) => {
+        const handleCerrarMenu = (event) => {
             if (menuRef.current && !menuRef.current.contains(event.target)) {
-                setIsMenuOpen(false);
+                setMenuAbierto(false);
             }
         };
-        document.addEventListener("mousedown", handleClickOutsideMenu);
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutsideMenu);
-        };
-
+        document.addEventListener("mousedown", handleCerrarMenu);
     }, [menuRef]);
 
+    /* Si existe usuario en localStorage, usuarioIngresado=true */
     useEffect(() => {
         let usuario = localStorage.getItem("usuario")
         if (usuario) {
@@ -63,22 +33,11 @@ export default function BarraNavegacion() {
         }
     }, [])
 
-    const handleCerrarSesion = () => {
-        localStorage.removeItem('usuario');
-        const usuarioLocal = localStorage.getItem("usuario");
-        if (usuarioLocal == null) {
-            window.location = "/Indice-Diario-Cliente/inicio.html";
-        } else {
-            window.location = "/Indice-Diario-Cliente/perfil"
-        }
-
-        verificarUsuario();
-    }
-
     return (
         <>
             <nav>
-                <picture id="contenedor-icono-barras" onClick={toggleMenu}>
+                {/* Menu lateral se renderiza al hacer click en contenedor-icono-barras: menuAbierto=true */}
+                <picture id="contenedor-icono-barras" onClick={abrirMenu}>
                     <svg xmlns="http://www.w3.org/2000/svg" id="icono-barras" fill="#fff" viewBox="0 0 448 512"><path d="M0 96c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm448 160c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h384c17.7 0 32 14.3 32 32z" /></svg>
                 </picture>
                 <a href="/Indice-Diario-Cliente/inicio.html">
@@ -88,11 +47,13 @@ export default function BarraNavegacion() {
                     <li><a href="/Indice-Diario-Cliente/inicio.html">Inicio</a></li>
                     <li><a href="/Indice-Diario-Cliente/planes.html">Planes</a></li>
                     <li><a href="/Indice-Diario-Cliente/glosario.html">Glosario</a></li>
+                    
+                    {/* Si existe usuario en localStorage, renderiza nuevas opciones en barraNavegacion/menuLateral */}
                     {usuarioIngresado ?
                         <>
                             <li><a href="/Indice-Diario-Cliente/perfil">Perfil</a></li>
                             <li><a href="/Indice-Diario-Cliente/consulta">Consultas</a></li>
-                            <li><a href="/Indice-Diario-Cliente/inicio.html" onClick={handleCerrarSesion}>Cerrar sesión</a></li>
+                            <li><a onClick={handleCerrarSesion}>Cerrar sesión</a></li>
                         </> :
                         <>
                             <li><a href="/Indice-Diario-Cliente/ingreso.html">Ingreso</a></li>
@@ -102,7 +63,8 @@ export default function BarraNavegacion() {
                 </ul>
 
             </nav>
-            {isMenuOpen && (
+            {/* Menu se renderiza si menuAbierto==true */}
+            {menuAbierto && (
                 <section id="menu-lateral" className={'show'} ref={menuRef}>
                     <h3>Menú</h3>
                     <ul id="lista-menu-lateral">
@@ -140,7 +102,7 @@ export default function BarraNavegacion() {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/Indice-Diario-Cliente/inicio.html" className="links-menu-lateral" onClick={handleCerrarSesion}>
+                                    <a className="links-menu-lateral" onClick={handleCerrarSesion}>
                                         <svg className="iconos-menu-lateral" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z" /></svg>
                                         Cerrar sesión
                                     </a>

@@ -1,9 +1,11 @@
+import handleCerrarSesion from "@/cerrarSesion";
 import { useEffect, useState } from "react";
 
 export default function InfoUsuarioAdicional() {
 
     const [datosUsuario, setDatosUsuario] = useState([]);
 
+    /* Trae datos adicionales del usuario definidos en formulario de registro */
     const cargarDatos = async () => {
         try {
             const baseURL = 'https://placid-seen-raven.glitch.me';
@@ -29,22 +31,9 @@ export default function InfoUsuarioAdicional() {
         cargarDatos();
     }, []);
 
-    const handleCerrarSesion = () => {
-        localStorage.removeItem('usuario');
-        const usuarioLocal = localStorage.getItem("usuario");
-        if (usuarioLocal == null) {
-          window.location = "/Indice-Diario-Cliente/inicio.html";
-        } else {
-          window.location = "/Indice-Diario-Cliente/perfil"
-        }
-    
-        verificarUsuario();
-      }
-
     return (
         <>
             <h2>Bienvenido {datosUsuario.nombre} {datosUsuario.apellido}</h2>
-
             <table>
                 <thead>
                     <tr>

@@ -3,6 +3,8 @@ document.getElementById("menu-lateral").style.display = "none"
 const iconoBarras = document.getElementById("contenedor-icono-barras")
 const lateral = document.getElementById("menu-lateral")
 
+/* Abrir y cerrar menú */
+/* Crea clases CSS "show" y "dontshow" que agregan animación */
 iconoBarras.addEventListener("click", () => {
     lateral.classList.remove("dontshow");
     lateral.style.display = "block";
@@ -20,8 +22,11 @@ document.addEventListener("click", (event) => {
 });
 
 const usuarioExiste = localStorage.getItem("usuario")
+/* Listado opciones menú lateral */
 const listaMenuLateral = document.getElementById("lista-menu-lateral")
+/* Listado opciones barra de navegación */
 const listaBarraNavegacion = document.getElementById("lista-barra-navegacion")
+/* Opciones a quitar (ingresa y regístrate) en caso de usuarioExiste=true */
 const condicionalesSinUsuario = document.getElementsByClassName("condicion-usuario-registrado")
 const condicionalesSinUsuarioBarra = document.getElementsByClassName("condicion-usuario-registrado-barra")
 
@@ -31,22 +36,12 @@ if (usuarioExiste) {
         listaBarraNavegacion.removeChild(condicionalesSinUsuarioBarra[0])
     }
 
-    /* const handleCerrarSesion = () => {
-        localStorage.removeItem('usuario');
-        const usuarioLocal = localStorage.getItem("usuario");
-        if (usuarioLocal == null) {
-            window.location = "/Indice-Diario-Cliente/inicio.html";
-        } 
-    } */
-
-    /* Elementos a insertar en menú lateral en caso de haber un usuario ingresado */
+    /* Elementos a insertar en menú lateral en caso de usuarioExiste=true */
 
     let perfil = document.createElement("li")
-    /* let cerrarSesion = document.createElement("li") */
     let redirectConsultas = document.createElement("li")
 
     perfil.setAttribute("class", "links-menu-lateral")
-    /* cerrarSesion.setAttribute("class", "links-menu-lateral") */
     redirectConsultas.setAttribute("class", "links-menu-lateral")
 
     perfil.innerHTML =
@@ -71,7 +66,7 @@ if (usuarioExiste) {
     listaMenuLateral.appendChild(perfil)
     listaMenuLateral.appendChild(redirectConsultas)
 
-    /* Elementos a insertar en barra de navegación en caso de haber un usuario ingresado */
+    /* Elementos a insertar en barra de navegación en caso de usuarioExiste=true */
 
     let perfilBarra = document.createElement("li")
     let redirectConsultasBarra = document.createElement("li")

@@ -3,13 +3,25 @@ import { useState } from "react";
 
 export default function PanelConsultas({ consultas, setConsultas }) {
 
+    /* Valor otorgado al seleccionar el botón de un índice */
     const [nombreIndicador, setNombreIndicador] = useState('');
+    /* Valor otorgado al seleccionar fecha a consultar */
     const [fechaConsultada, setFechaConsultada] = useState('');
     const [respuestaAPI, setRespuestaAPI] = useState('')
+    
+    /* Renderiza índices nacionales o internacionales según estado de botones */
     const [botonNacionales, setBotonNacionales] = useState(true);
+    
+    const handleBotonInternacional = () => {
+        setBotonNacionales(false);
+    }
+    const handleBotonNacional = () => {
+        setBotonNacionales(true);
+    }
+
 
     const procesarConsulta = async () => {
-        /* Guardar consulta en registro */
+        /* Guardar consulta en colección firebase registroConsultas */
         try {
             const consulta = {
                 nombreIndicador,
@@ -39,32 +51,22 @@ export default function PanelConsultas({ consultas, setConsultas }) {
         } catch (error) {
             console.error(error)
         }
-        /* FETCH API MINDICADOR.CL */
 
+        /* FETCH API MINDICADOR.CL */
+        /* Ajuste formato fecha dd-mm-aaaa, requerido por API */
         let fechaCorregida = fechaConsultada.split("-").reverse().join("-")
         const baseURLAPI = `https://mindicador.cl/api/`
         const urlAPI = baseURLAPI + `${nombreIndicador}` + `/${fechaCorregida}`
-
 
         fetch(urlAPI)
             .then(response => response.json())
             .then(datos => {
                 setRespuestaAPI(datos)
             })
-
-    }
-
-    const handleBotonInternacional = () => {
-        setBotonNacionales(false);
-    }
-
-    const handleBotonNacional = () => {
-        setBotonNacionales(true);
     }
 
     return (
         <>
-
             <section>
                 <h4 className="titulos-de-consultas">Consulta tu índice diario</h4>
 
@@ -134,23 +136,17 @@ export default function PanelConsultas({ consultas, setConsultas }) {
                 }
                 <div id="despliegue-respuesta">
                     <h4>Selecciona una fecha</h4>
-
                     <input type="date" name="fecha-query" id="fecha-query" onChange={(e) => setFechaConsultada(e.target.value)} />
-
                     <input type="submit" name="consultar-indice" id="consultar-indice" onClick={procesarConsulta} />
                 </div>
                 {respuestaAPI ?
-
                     <article>
                         <h4 className="titulos-de-consultas">Resultado de la consulta</h4>
                         <p className="parrafos-informativos">A día de hoy, el valor del índice seleccionado (<strong>{respuestaAPI.nombre}</strong>) es de {respuestaAPI.serie[0].valor}. Este indicador se mide en {respuestaAPI.unidad_medida}.</p>
-                        {console.log(respuestaAPI)}
                     </article>
-
                     :
                     <>
                     </>
-
                 }
             </section>
         </>

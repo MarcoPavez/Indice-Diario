@@ -6,7 +6,6 @@ const formCorreo = document.getElementById("correo");
 const formContrasena = document.getElementById("contrasena");
 const formRepetirContrasena = document.getElementById("confirmar-contrasena");
 const formGenero = document.querySelectorAll('#genero input[type="radio"]');
-console.log(formGenero)
 const formNacimiento = document.getElementById("fecha-nacimiento");
 const formPais = document.getElementById("seleccionar-pais");
 const formTerminosCondiciones = document.getElementById("boton-submit-registro");
@@ -64,7 +63,6 @@ formApellido.addEventListener("focusout", () => {
 })
 
 /* Validación correo electrónico */
-
 const validaCorreo = () => {
     let valorCorreo = formCorreo.value.trim();
     // Expresión regular: estructura básica de un correo (aaa@bbb.ccc)
@@ -94,8 +92,6 @@ formCorreo.addEventListener("focusout", () => {
 })
 
 /* Validación Contraseña */
-
-
 const validaContrasena = () => {
 
     let valorContrasena = formContrasena.value.trim();
@@ -144,7 +140,6 @@ formContrasena.addEventListener("focusout", () => {
 });
 
 /* Validación repetir contrasena */
-
 const validaRepetirContrasena = () => {
     let valorContrasenaValidacion = formContrasena.value;
     let valorRepetirContrasena = formRepetirContrasena.value;
@@ -160,13 +155,11 @@ const validaRepetirContrasena = () => {
     }
 }
 
-
 formRepetirContrasena.addEventListener("focusout", () => {
     validaRepetirContrasena();
 })
 
 /* Validación género */
-
 const validaGenero = () => {
     let seleccionGenero = false;
     for (let i = 0; i < formGenero.length; i++) {
@@ -239,9 +232,7 @@ formNacimiento.addEventListener("focusout", () => {
     validaNacimiento();
 }) 
 
-
 /* Validación país */
-
 const validarPais = () => {
     if (formPais.value === '') {
         mensajeErrorPais.innerText = "Selecciona un país"
@@ -271,7 +262,6 @@ formulario.addEventListener("submit", async (submitEvent) => {
     submitEvent.preventDefault();
 
     /* Validación general */
-
     validaNombreApellido(formNombre.value, formNombre, mensajeErrorNombre);
     validaNombreApellido(formApellido.value, formApellido, mensajeErrorApellido);
     validaCorreo();
@@ -317,6 +307,7 @@ formulario.addEventListener("submit", async (submitEvent) => {
 
             const objetoJSON = await respuesta.json();
             console.dir(objetoJSON);
+            window.location = "/Indice-Diario-Cliente/ingreso.html"
         } catch (error) {
             //gestionar errores
             console.error(error.code);
@@ -326,7 +317,6 @@ formulario.addEventListener("submit", async (submitEvent) => {
         /* Guardar información adicional usuario */
 
         const nombre = formData.get("nombre");
-        console.log(nombre)
         const apellido = formData.get("apellido");
         const nombreUsuario = formData.get("nombre-usuario");
         const genero = formData.get("genero");
@@ -342,8 +332,6 @@ formulario.addEventListener("submit", async (submitEvent) => {
             fechaNacimiento,
             paisResidencia,
         }
-
-        console.log(infoUsuario)
 
         const baseUrlInfoUsuario = "https://placid-seen-raven.glitch.me";
         const urlInfoUsuario = baseUrlInfoUsuario + "/infoUsuarioAdicional";
@@ -362,7 +350,6 @@ formulario.addEventListener("submit", async (submitEvent) => {
                 console.error("La respuesta no está OK");
                 return;
             }
-
             const objetoJSONInfoUsuario = await respuestaInfoUsuario.json();
             console.dir(objetoJSONInfoUsuario);
         } catch (error) {

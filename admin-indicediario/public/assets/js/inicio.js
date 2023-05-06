@@ -27,37 +27,10 @@ for (let i = 0; i < queryIndicesNacionales.length; i++) {
   });
 }
 
-
-
-
-
-/* Obtiene valor de fecha seleccionada */
-
-/* const queryFechaIndicador = document.getElementById("fecha-query");
-let fechaCorregida = "";
-
-function transformarFecha(fecha) {
-  formatoCorrecto = fecha.split("-").reverse().join("-");
-  return formatoCorrecto;
-}
-
-queryFechaIndicador.addEventListener("change", () => {
-  let queryFecha = queryFechaIndicador.value;
-  fechaCorregida = transformarFecha(queryFecha);
-}); */
-
-{/* <article> 
-            <h5>A la fecha del ${fechaCorregida}, el valor del índice seleccionado (${datos.nombre}) es de ${datos.serie[0].valor}</h5>
-        </article> */}
-
-
-
-
 /* FETCH API MINDICADOR.CL */
 /* Realiza consulta a API según valores previos y genera respuesta */
 const botonSubmit = document.getElementById("consultar-indice");
 let valorRespuesta = document.createElement("article");
-/* let botonDescarga = document.createElement("button") */
 
 botonSubmit.addEventListener("click", () => {
   fetch(`https://mindicador.cl/api/${valorBoton}`)
@@ -84,26 +57,3 @@ botonSubmit.addEventListener("click", () => {
       }
     });
 });
-
-/* 
-            Genera botón para descarga de respuesta en formato CSV
-            botonDescarga.innerText = "Descargar CSV"
-
-            document.getElementById("fechaIndicador").append(botonDescarga)
-
-            botonDescarga.addEventListener("click", () => {
-
-                CSV como un string 
-                const csv = Papa.unparse(datos.serie);
-      
-                Crea objeto Blob a partir de const csv. El objeto Blob es capaz de leer el string como CSV 
-                const blob = new Blob([csv], { type: 'text/csv' });
-
-                Crea url y descargable de const blob 
-                const url = URL.createObjectURL(blob);
-                const link = document.createElement('a');
-                link.href = url;
-                link.download = 'data.csv';
-
-                link.click();
-            }) */

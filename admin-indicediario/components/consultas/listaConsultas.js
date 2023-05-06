@@ -1,22 +1,22 @@
 import { useEffect } from "react"
 
-export default function ListaConsultas({consultas, setConsultas}) {
+export default function ListaConsultas({ consultas, setConsultas }) {
 
     const cargarDatos = async () => {
         try {
             const baseURL = 'https://placid-seen-raven.glitch.me';
             const url = baseURL + '/registro-consultas';
-        
+
             const respuesta = await fetch(url);
             if (!respuesta.ok) throw new Error("Problema al recuperar las categorías")
             const consultaRecibida = await respuesta.json();
             setConsultas(consultaRecibida);
 
         } catch (error) {
-            console.error( error )
+            console.error(error)
         }
     }
- 
+
     useEffect(() => {
         cargarDatos();
     }, []);
@@ -24,17 +24,17 @@ export default function ListaConsultas({consultas, setConsultas}) {
     const eliminarDato = async (consulta) => {
         try {
             const baseURL = 'https://placid-seen-raven.glitch.me';
-            const url = baseURL + '/registro-consultas?id='+consulta.id;
+            const url = baseURL + '/registro-consultas?id=' + consulta.id;
 
-            const respuesta = await fetch (url, {
+            const respuesta = await fetch(url, {
                 method: 'DELETE'
             });
-            if( !respuesta.ok) throw new Error ("No se pudo borrar la consulta");
+            if (!respuesta.ok) throw new Error("No se pudo borrar la consulta");
             const resultado = await respuesta.json();
             console.log("Categoría borrada de manera exitosa");
             cargarDatos();
-        } catch ( error ) {
-            console.error({error: error.message})
+        } catch (error) {
+            console.error({ error: error.message })
         }
     };
 
@@ -55,8 +55,7 @@ export default function ListaConsultas({consultas, setConsultas}) {
                             <td>{consulta.nombreIndicador}</td>
                             <td>{consulta.fechaConsultada}</td>
                             <td>
-                   
-                                <button onClick={ () => eliminarDato(consulta)}>Eliminar</button>
+                                <button onClick={() => eliminarDato(consulta)}>Eliminar</button>
                             </td>
                         </tr>
                     ))}

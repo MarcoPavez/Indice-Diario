@@ -4,50 +4,19 @@ import InfoUsuarioAdicional from "@/components/perfil/infoUsuarioAdicional.js";
 import PanelConsultas from "@/components/consultas/panelConsultas";
 import ListaConsultas from "@/components/consultas/listaConsultas";
 import ConfigPerfil from "@/components/perfil/configPerfil";
+import { verificarUsuario } from "@/verificarToken";
 
 export default function Perfil() {
 
   const [consultas, setConsultas] = useState([]);
   const [componenteRender, setComponenteRender] = useState(1);
 
-  const verificarUsuario = async () => {
-
-    const usuarioLocal = localStorage.getItem("usuario");
-    if (usuarioLocal == null) {
-      window.location = "/Indice-Diario-Cliente/inicio.html";
-    }
-
-    const objetoUsuario = JSON.parse(usuarioLocal);
-    const token = objetoUsuario.stsTokenManager.accessToken;
-
-    const baseURL = "https://placid-seen-raven.glitch.me";
-    const url = baseURL + "/usuario/verificarToken";
-    try {
-      const respuesta = await fetch(url, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": "Bearer " + token,
-        },
-      });
-
-      if (!respuesta.ok) {
-        throw new Error("Token inválido");
-      }
-
-      const data = await respuesta.json();
-      return data;
-    } catch (error) {
-      console.log(error.message);
-      window.location = "/Indice-Diario-Cliente/inicio.html";
-      throw new Error("Error al verificar usuario");
-    }
-  };
-
+  /* Página privada, verifica usuario luego de renderización inicial */
   useEffect(() => {
     verificarUsuario();
   });
 
+  /* Renderiza componentes según evento en botones */
   const handleRenderPerfil = () => setComponenteRender(1);
   const handleRenderPanel = () => setComponenteRender(2);
   const handleRenderRegistro = () => setComponenteRender(3);
@@ -60,7 +29,7 @@ export default function Perfil() {
     componentToRender = <PanelConsultas />;
   } else if (componenteRender == 3) {
     componentToRender = <ListaConsultas consultas={consultas}
-      setConsultas={setConsultas} />;
+                                        setConsultas={setConsultas} />;
   } else if (componenteRender == 4) {
     componentToRender = <ConfigPerfil />;
   }
@@ -77,7 +46,6 @@ export default function Perfil() {
       </section>
 
       {componentToRender}
-
       
     </Layout>
   )
