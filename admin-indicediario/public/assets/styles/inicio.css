@@ -148,6 +148,11 @@ strong {
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
+
+  .div-pantallas-grandes {
+    margin-inline: 8vw;
+  }
+
   .panel-botones {
     font-size: 0.8rem;
     font-weight: 400;
@@ -161,6 +166,7 @@ strong {
 }
 
 @media (min-width: 769px) and (max-width:1200px) {
+
   #informacion-introductoria h2 {
     margin-top: 5vw;
     padding-bottom: 0;
@@ -191,15 +197,21 @@ strong {
     padding: 1.5vw;
     font-size: 1.5vw;
     margin-block: 2vw;
-    height: 5vw;
+    height: 7vw;
+  }
+
+  #parrafo-metodo,
+  #parrafo-tendencias{
+    height: 4.5vw;
   }
 
   .div-pantallas-grandes>.parrafos-informativos {
-    padding-top: 2.5vw;
+    height: 3vw;
+    padding-bottom: 2vw;
   }
 
   .div-pantallas-grandes {
-    margin-inline: 5vw;
+    margin-inline: 12.5vw;
   }
 
   .titulos-de-consultas {
@@ -221,9 +233,8 @@ strong {
   #botones-nacionales,
   #botones-internacionales {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(19vw, 1fr));
-    grid-gap: 1vw;
-    margin-inline: 5vw;
+    grid-template-columns: repeat(auto-fit, minmax(15vw, 1fr));
+    margin-inline: 1vw;
     margin-block: 3vw;
   }
 

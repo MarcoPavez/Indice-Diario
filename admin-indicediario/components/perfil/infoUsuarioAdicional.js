@@ -29,6 +29,18 @@ export default function InfoUsuarioAdicional() {
         cargarDatos();
     }, []);
 
+    const handleCerrarSesion = () => {
+        localStorage.removeItem('usuario');
+        const usuarioLocal = localStorage.getItem("usuario");
+        if (usuarioLocal == null) {
+          window.location = "/Indice-Diario-Cliente/inicio.html";
+        } else {
+          window.location = "/Indice-Diario-Cliente/perfil"
+        }
+    
+        verificarUsuario();
+      }
+
     return (
         <>
             <h2>Bienvenido {datosUsuario.nombre} {datosUsuario.apellido}</h2>
@@ -72,6 +84,9 @@ export default function InfoUsuarioAdicional() {
                     </tr>
                 </tbody>
             </table>
+            <button className="botones-perfil" onClick={handleCerrarSesion}>
+                Cerrar sesión
+            </button>
         </>
     )
 }

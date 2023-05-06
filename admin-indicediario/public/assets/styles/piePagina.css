@@ -42,3 +42,22 @@
 .footer-link:hover {
     text-decoration: underline;
 }
+
+@media (min-width: 1000px){
+
+    #footer{
+        height: 20vw;
+    }
+
+    #footer-lista{
+        margin-top: 5vw;
+    }
+
+    .footer-link{
+        font-size: 1.75vw;
+    }
+
+    #footer-parrafo{
+        font-size: 1.5vw;
+    }
+}

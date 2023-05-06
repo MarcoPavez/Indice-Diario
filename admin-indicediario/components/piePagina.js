@@ -7,19 +7,19 @@ export default function PiePagina(props) {
       <div id="footer-links">
         <ul id="footer-lista">
           <li>
-            <a className="footer-link" href="./inicio.html">Inicio</a>
+            <a className="footer-link" href="/Indice-Diario-Cliente/inicio.html">Inicio</a>
           </li>
           <li>
-            <a className="footer-link" href="./planes.html">Planes</a>
+            <a className="footer-link" href="/Indice-Diario-Cliente/planes.html">Planes</a>
           </li>
           <li>
-            <a className="footer-link" href="./glosario.html">Glosario</a>
+            <a className="footer-link" href="/Indice-Diario-Cliente/glosario.html">Glosario</a>
           </li>
           <li>
-            <a className="footer-link" href="./ingreso.html">Ingresa</a>
+            <a className="footer-link" href="/Indice-Diario-Cliente/ingreso.html">Ingresa</a>
           </li>
           <li>
-            <a className="footer-link" href="./registro.html">Regístrate</a>
+            <a className="footer-link" href="/Indice-Diario-Cliente/registro.html">Regístrate</a>
           </li>
         </ul>
       </div>

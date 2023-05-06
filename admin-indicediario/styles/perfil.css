@@ -1,0 +1,67 @@
+h2{
+    text-align: center;
+}
+
+#__next{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    
+    width: 100%;
+}
+
+table{
+    width: 50%;
+}
+
+#lista-perfil{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15vw;
+    padding: 0;
+}
+
+#lista-perfil li{
+    display: inline-block;
+    text-align: center;
+    font-size: 3vw;
+}
+
+.botones-perfil{
+    background-color: var(--colorTriadicoPrimero);
+    width: 20vw;
+    height: 7.5vw;
+    box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.15);
+    border-style: none;
+    border-radius: 3vw;
+    color: white;
+    font-size: 2.5vw;
+    font-weight: 500;
+}
+
+@media (min-width: 900px){
+    .botones-perfil{
+        width: 15vw;
+    height: 4.5vw;
+    font-size: 1.75vw;
+    margin-top: 1vw;
+    }
+
+    .parrafos-informativos{
+        font-size: 2vw;
+    }
+
+    h4{
+        font-size: 4vw;
+    }
+
+    #fecha-query{
+        padding-inline: 2vw;
+        font-size: 2.5vw;
+        margin-bottom: 3vw;
+    }
+}

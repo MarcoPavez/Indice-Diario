@@ -143,7 +143,8 @@ export default function PanelConsultas({ consultas, setConsultas }) {
 
                     <article>
                         <h4 className="titulos-de-consultas">Resultado de la consulta</h4>
-                        <p className="parrafos-informativos">A día de hoy, el valor del índice seleccionado (<strong>{respuestaAPI.nombre}</strong>) es de {respuestaAPI.valor}. Este indicador se mide en {respuestaAPI.unidad_medida}.</p>
+                        <p className="parrafos-informativos">A día de hoy, el valor del índice seleccionado (<strong>{respuestaAPI.nombre}</strong>) es de {respuestaAPI.serie[0].valor}. Este indicador se mide en {respuestaAPI.unidad_medida}.</p>
+                        {console.log(respuestaAPI)}
                     </article>
 
                     :

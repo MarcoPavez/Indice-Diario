@@ -1,7 +1,7 @@
-import React from 'react'
-
 export default function ConfigPerfil() {
   return (
-    <div>C</div>
+    <>
+      <h2>Configuración perfil</h2>
+    </>
   )
 }

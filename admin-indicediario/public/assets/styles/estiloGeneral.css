@@ -38,3 +38,9 @@ a{
 ul{
   list-style: none;
 }
+
+.iconos-menu-lateral {
+  width: 3.5vw;
+  height: auto;
+  margin-right: 1vw;
+}

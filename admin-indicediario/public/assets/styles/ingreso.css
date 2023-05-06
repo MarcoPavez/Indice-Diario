@@ -88,3 +88,53 @@ span {
   font-size: 3vw;
   text-align: center;
 }
+
+@media (min-width: 800px){
+  form{
+    margin-top: 7.5vw;
+  }
+
+  h2{
+    margin-top: 7vw;
+    margin-bottom: 0;
+    font-size: 3.25vw;
+  }
+
+  fieldset{
+    margin-inline: 12.5vw;
+  }
+
+  legend{
+    font-size: 2vw;
+    font-weight: 700;
+  }
+
+  label{
+    font-size: 1.75vw;
+  }
+
+  input{
+    font-size: 1.75vw;
+    padding: 0;
+  }
+
+  #boton-ingreso{
+    font-size: 1.75vw;
+    padding-block: 1vw;
+    width: 35%;
+    transform: translate(92.5%);
+    margin-top: -2vw;
+    margin-bottom: 0;
+  }
+
+  span{
+    font-size: 1.75vw;
+    margin-top: -2vw;
+  }
+}
+
+@media (min-width: 1200px){
+  h2{
+    margin-top: 0;
+  }
+}

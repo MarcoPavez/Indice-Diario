@@ -1,5 +1,5 @@
 /* Atributos de estructura */
-main{
+main {
   padding-inline: 2vw;
 }
 
@@ -29,7 +29,7 @@ fieldset {
 label {
   margin-bottom: 1vw;
 }
- 
+
 .inputs-escritos {
   margin-bottom: 2vw;
   padding: 1vw;
@@ -38,16 +38,16 @@ label {
 #genero {
   display: flex;
   flex-direction: column;
+  width: 75%;
 }
 
 .contenedor-opciones-genero {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
+
   gap: 1vw;
   margin-bottom: 2vw;
-  width: 75%;
 }
 
 .opcion-genero {
@@ -149,6 +149,60 @@ span {
     gap: 20px;
     padding: 1vw;
     margin-top: 15vw;
+  }
+}
+
+@media (min-width: 1000px) {
+  form {
+    margin-top: 8vw;
+    margin-inline: 12.5vw;
+  }
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 3.25vw;
+  }
+
+  legend {
+    font-size: 2vw;
+    font-weight: 700;
+  }
+
+  label {
+    font-size: 1.75vw;
+  }
+
+  input {
+    padding: 0;
+  }
+
+  .inputs-escritos {
+    font-size: 1.5vw;
+  }
+
+
+  #seleccionar-pais,
+  #fecha-nacimiento {
+    margin-bottom: 2vw;
+    width: 22.5vw;
+    font-size: 1.5vw;
+  }
+
+  .opcion-genero {
+    width: 5%;
+  }
+
+  #input-terminos-condiciones{
+    width: 2.5%;
+  }
+
+  #boton-submit-registro{
+    font-size: 2.25vw;
+  }
+
+  p{
+    font-size: 2vw;
   }
 
 }
