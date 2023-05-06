@@ -1,0 +1,140 @@
+/* Atributos de estructura */
+main{
+  padding-inline: 2vw;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4vw;
+  margin-top: 10vw;
+  padding: 1vw;
+}
+
+
+h2{
+  margin: 0;
+  margin-top: 5vw;
+  margin-bottom: 3vw;
+}
+
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  padding: 2vw;
+}
+
+label{
+  margin-bottom: 5px;
+}
+
+
+input {
+  margin-bottom: 2vw;
+  padding: 1vw;
+}
+
+
+#boton-ingreso {
+  padding: 1vw;
+  transform: translate(50%);
+  width: 50%;
+  margin-top: 4vw;
+}
+
+
+/* Atributos de estilo */
+
+
+h2{
+  font-size: 5vw;
+  text-align: center;
+}
+
+
+legend {
+  font-size: 3.5vw;
+}
+ 
+
+label {
+  font-size: 3vw;
+  font-weight: 400;
+}
+
+input{
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  font-size: 2.2vw;
+}
+
+
+#boton-ingreso{
+  background-color: var(--colorPrincipal);
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 4vw;
+}
+
+span {
+  font-size: 3vw;
+  text-align: center;
+}
+
+@media (min-width: 800px){
+  form{
+    margin-top: 7.5vw;
+  }
+
+  h2{
+    margin-top: 7vw;
+    margin-bottom: 0;
+    font-size: 3.25vw;
+  }
+
+  fieldset{
+    margin-inline: 12.5vw;
+  }
+
+  legend{
+    font-size: 2vw;
+    font-weight: 700;
+  }
+
+  label{
+    font-size: 1.75vw;
+  }
+
+  input{
+    font-size: 1.75vw;
+    padding: 0;
+  }
+
+  #boton-ingreso{
+    font-size: 1.75vw;
+    padding-block: 1vw;
+    width: 35%;
+    transform: translate(92.5%);
+    margin-top: -2vw;
+    margin-bottom: 0;
+  }
+
+  span{
+    font-size: 1.75vw;
+    margin-top: -2vw;
+  }
+}
+
+@media (min-width: 1200px){
+  h2{
+    margin-top: 0;
+  }
+}

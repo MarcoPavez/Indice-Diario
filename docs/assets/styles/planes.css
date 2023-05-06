@@ -1,0 +1,233 @@
+/* Atributos de estructura */
+
+#titulo-planes {
+  margin: 0;
+  margin-top: 14vw;
+}
+
+#parrafo-necesidades,
+#parrafo-usuarios {
+  width: 50%;
+  margin-inline: 2vw;
+  padding: 1.5vw;
+}
+
+.motivos-suscripcion {
+  display: flex;
+  justify-content: space-between;
+}
+
+#icono-personas {
+  margin-left: 12vw;
+  width: 15%;
+}
+
+#icono-manos {
+  width: 15%;
+  margin-right: 12vw;
+}
+
+.section-planes {
+  padding-inline: 2vw;
+}
+
+#titulo-planes-disponibles {
+  margin-block: 1vw;
+}
+
+.planes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 4vw;
+  margin: 2vw;
+}
+
+.planes li {
+  margin-bottom: 1vw;
+}
+
+.parrafo-precio {
+  margin-top: 0;
+}
+
+.svg-lista-precio {
+  width: 2.5%;
+}
+
+span,
+button {
+  padding: 1vw;
+  width: 25%;
+}
+
+button {
+  width: 50%;
+  transform: translate(50%, 0%);
+}
+
+/* Atributos de estilo */
+
+#titulo-planes {
+  color: var(--colorPrincipal);
+  font-size: 4.5vw;
+  text-align: center;
+}
+
+#parrafo-necesidades,
+#parrafo-usuarios {
+  font-size: 3vw;
+  font-weight: 300;
+  text-align: justify;
+  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 1vw;
+}
+
+#icono-manos {
+  fill: var(--colorTriadicoPrimero);
+  stroke: black;
+  stroke-width: 5px;
+}
+
+#icono-personas {
+  fill: var(--colorTriadicoPrimero);
+  stroke: black;
+  stroke-width: 5px;
+}
+
+#titulo-planes-disponibles {
+  color: var(--colorPrincipal);
+  font-size: 5.5vw;
+  text-align: center;
+}
+
+.planes {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 1vw;
+  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+h3 {
+  font-size: 4.5vw;
+  color: var(--colorPrincipal);
+}
+
+.parrafo-precio {
+  font-size: 2.5vw;
+  font-weight: 300;
+}
+
+.planes li {
+  font-size: 2.5vw;
+  font-weight: 500;
+}
+
+.svg-lista-precio {
+  fill: var(--colorTriadicoPrimero);
+}
+
+.parrafo-terminos-condiciones {
+  font-size: 2vw;
+  font-weight: 300;
+  text-align: center;
+}
+
+span,
+button {
+  background-color: var(--colorTriadicoPrimero);
+  border-color: var(--colorTriadicoPrimero);
+  color: var(--colorBlanco);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5vw;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.25);
+  font-size: 3vw;
+  font-weight: 700;
+  text-align: center;
+}
+
+button {
+  margin-block: 3vw;
+}
+
+@media (min-width:1000px) {
+
+  #titulo-planes {
+    margin-bottom: 4vw;
+    margin-top: 15vw;
+    font-size: 3.75vw;
+  }
+
+  #titulo-planes-disponibles {
+    font-size: 3.75vw;
+    margin-bottom: 4vw;
+  }
+
+  h3{
+    font-size: 3.5vw;
+  }
+
+  .section-planes {
+    padding-inline: 8vw;
+    margin-block: 4vw;
+  }
+
+  #parrafo-necesidades,
+  #parrafo-usuarios {
+    font-size: 2.25vw;
+  }
+
+
+}
+
+@media (min-width:1200px) {
+  #titulo-planes {
+    margin-bottom: 4vw;
+    margin-top: 8vw;
+    font-size: 3.25vw;
+  }
+
+  #titulo-planes-disponibles {
+    font-size: 3vw;
+    margin-bottom: 4vw;
+  }
+
+  .section-planes {
+    padding-inline: 12vw;
+  }
+
+  #parrafo-necesidades,
+  #parrafo-usuarios {
+    font-size: 1.75vw;
+  }
+
+  span,
+  button {
+    font-size: 1.5vw;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 3vw;
+  }
+
+  .parrafo-precio {
+    font-size: 1.8vw;
+    font-weight: 300;
+  }
+
+  .planes li {
+    font-size: 2vw;
+    font-weight: 500;
+  }
+
+  .parrafo-terminos-condiciones {
+    font-size: 1.5vw;
+    font-weight: 300;
+    text-align: center;
+  }
+
+}
