@@ -31,14 +31,79 @@ La guía de estilos y los distintos bosquejos están disponibles en [Figma Índi
 
 ### Zona pública
 
+Disponible en:
 
+[Ingreso zona pública](https://marcopavez.github.io/Indice-Diario-Cliente/inicio.html)
 
 ### Zona privada
 
+Disponible en:
+
+[Ingreso zona privada](https://marcopavez.github.io/Indice-Diario-Cliente/ingreso.html)
 
 Las credenciales de ingreso son: 
 **Correo electrónico:** pruebademo@gmail.com
 **Contraseña:** Pruebademo1.
+
+## Referencias API
+
+Desplegado en [Glitch](https://placid-seen-raven.glitch.me/)
+
+#### Ingresar en la página
+
+```http
+  POST /ingreso
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `correo` | `string` | **Required**. Correo electrónico |
+|  `contrasena` | `string` | **Requerido**. Contraseña |
+
+#### CRUD - Información Adicional del Usuario
+
+```http
+  GET POST PUT DELETE /infoUsuarioAdicional
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `nombre`      | `string` | **Required**. Nombre   |
+| `apellido`      | `string` | **Required**. Apellido |
+| `nombreUsuario`      | `string` | Nombre de usuario. Personalizable. |
+| `correo`      | `string` | **Required**. Correo electrónico |
+| `genero`      | `string` | **Required**. Género de la persona |
+| `fechaNacimiento`      | `date` | **Required**. Fecha de nacimiento |
+| `paisResidencia`      | `string` | País de residencia |
+
+#### Obtener Consultas de Indicadores
+
+```http
+  GET POST /registro-consultas
+```
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `nombreIndicador`      | `string` | **Required**. Nombre del indicador a consultar   |
+| `fechaConsultada` | `date` | **Required**. Fecha a consultar | 
+
+#### Crear Consulta de Indicadores
+
+```http
+  POST /registro-consultas
+```
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `nombreIndicador`      | `string` | **Required**. Nombre del indicador a consultar   |
+| `fechaConsultada` | `date` | **Required**. Fecha a consultar | 
+
+#### Eliminar Consulta de indicadores
+
+```http
+  DELETE /registro-consultas?id=${id}
+```
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. ID del registro a eliminar |
 
 ## Créditos 
 
